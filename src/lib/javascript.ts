@@ -5,7 +5,7 @@ import { Glob } from '../utils/enum';
 export function javascript(options: ConfigOptions): ConfigObject {
   const { overrides } = options;
 
-  const files = [Glob.TYPESCRIPT];
+  const files = [Glob.ALL];
   if (options.vue) files.push(Glob.VUE);
 
   return {
@@ -119,14 +119,14 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'no-unsafe-finally': 'error',
       'no-unsafe-optional-chaining': ['error', { disallowArithmeticOperators: true }],
       'no-unused-expressions': 'off',
-      "no-unused-vars": "off",
-      "no-use-before-define": "off",
+      'no-unused-vars': 'off',
+      'no-use-before-define': 'off',
       'no-useless-backreference': 'error',
       'no-useless-call': 'error',
       'no-useless-catch': 'error',
       'no-useless-computed-key': 'error',
       'no-useless-concat': 'error',
-      "no-useless-constructor": "off",
+      'no-useless-constructor': 'off',
       'no-useless-rename': 'error',
       'no-useless-return': 'error',
       'no-var': 'error',
@@ -141,7 +141,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
           ignoreReadBeforeAssign: true
         }
       ],
-      "prefer-destructuring": "off",
+      'prefer-destructuring': 'off',
       'prefer-exponentiation-operator': 'error',
       'prefer-object-has-own': 'error',
       'prefer-object-spread': 'error',
@@ -151,7 +151,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'prefer-spread': 'error',
       'prefer-template': 'error',
       'require-atomic-updates': 'error',
-      "require-await": "off",
+      'require-await': 'off',
       'sort-imports': [
         'error',
         {
