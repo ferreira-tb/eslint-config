@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -25,7 +25,7 @@
     "minify": "pnpm exec minify-it dist",
     "prepare": "husky install",
     "release": "miho -l publish",
-    "rollup": "rollup --config rollup.config.ts --configPlugin typescript",
+    "rollup": "rollup --config rollup.config.js",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
