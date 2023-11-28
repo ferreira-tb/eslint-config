@@ -3,21 +3,21 @@ export interface ConfigObject {
   files: string[];
   ignores?: Ignores['ignores'];
   languageOptions: {
-    ecmaVersion: 'latest';
-    sourceType: 'module';
+    ecmaVersion?: 'latest';
+    sourceType?: 'module';
     parser?: unknown;
-    parserOptions?: {
-      project?: string[];
-      tsconfigRootDir?: string;
-    };
+    parserOptions?: Record<string, unknown>;
     globals?: Record<string, boolean | 'readonly' | 'writeable'>;
   };
   plugins?: Record<string, unknown>;
+  processor?: unknown;
   rules: Rules;
 }
 
 export interface ConfigOptions {
+  prettier?: boolean;
   vue?: boolean;
+  jsx?: boolean;
   /** `tsconfig.json` files for Typescript. */
   project: string[];
   ignores?: Ignores['ignores'];
@@ -32,7 +32,7 @@ export interface Ignores {
   ignores: string[];
 }
 
-export type Severity = 'error' | 'warn' | 'off';
+export type Severity = 'error' | 'warn' | 'off' | 0 | 1;
 
 export type RuleOption =
   | [Severity, string | Record<string, unknown>]
