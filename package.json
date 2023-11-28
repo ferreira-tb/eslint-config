@@ -1,0 +1,71 @@
+{
+  "name": "@tb-dev/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint config",
+  "license": "MIT",
+  "type": "module",
+  "private": false,
+  "packageManager": "pnpm@8.11.0",
+  "homepage": "https://github.com/ferreira-tb/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferreira-tb/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ferreira-tb/eslint-config/issues"
+  },
+  "lint-staged": {
+    "*.{?(c|m)@(j|t)s,css,vue,md,json}": "prettier --write"
+  },
+  "scripts": {
+    "build": "run-s rollup minify",
+    "deps": "pnpm exec taze -w -f",
+    "format": "pnpm exec prettier . --write",
+    "format-check": "pnpm exec prettier . --check",
+    "minify": "pnpm exec minify-it dist",
+    "prepare": "husky install",
+    "release": "miho -l publish",
+    "rollup": "rollup --config rollup.config.ts --configPlugin typescript",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "globals": "^13.23.0"
+  },
+  "devDependencies": {
+    "@octokit/core": "^5.0.2",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "^20.10.0",
+    "eslint": "^8.54.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "miho": "^1.7.9",
+    "minify-it": "^1.1.1",
+    "npm-run-all2": "^6.1.1",
+    "prettier": "^3.1.0",
+    "rollup": "^4.5.2",
+    "taze": "^0.12.1",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.2",
+    "typescript": "5.2.2",
+    "vite": "^5.0.2",
+    "vite-plugin-dts": "^3.6.3"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  }
+}
