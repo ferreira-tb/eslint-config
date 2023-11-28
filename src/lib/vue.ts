@@ -269,6 +269,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
         parser: vueParser,
         parserOptions: {
           parser: tsParser,
+          project: options.project,
           extraFileExtensions: ['.vue'],
           sourceType: 'module',
           ecmaVersion: 'latest',
