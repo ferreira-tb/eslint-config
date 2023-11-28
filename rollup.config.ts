@@ -5,7 +5,7 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   plugins: [typescript(), dts({ rollupTypes: true })],
   input: 'src/index.ts',
-  external: [/@typescript-eslint/, 'globals'],
+  external: [/^node:/, /@typescript-eslint/, 'globals'],
   output: [
     {
       file: 'dist/index.mjs',

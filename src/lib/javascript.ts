@@ -1,17 +1,15 @@
 import globals from 'globals';
 import type { ConfigObject, ConfigOptions } from '../types';
 import { Glob } from '../utils/enum';
-import type { WithRequired } from 'miho';
 
-export function javascript(options: WithRequired<ConfigOptions, 'ignores'>): ConfigObject {
-  const { ignores, overrides } = options;
+export function javascript(options: ConfigOptions): ConfigObject {
+  const { overrides } = options;
 
   const files = [Glob.TYPESCRIPT];
   if (options.vue) files.push(Glob.VUE);
 
   return {
     files,
-    ignores,
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

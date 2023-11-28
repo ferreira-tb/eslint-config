@@ -2,12 +2,9 @@ import process from 'node:process';
 import { interopDefault } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
 import { Glob } from '../utils/enum';
-import type { WithRequired } from 'miho';
 
-export async function typescript(
-  options: WithRequired<ConfigOptions, 'ignores'>
-): Promise<ConfigObject> {
-  const { project, ignores, overrides } = options;
+export async function typescript(options: ConfigOptions): Promise<ConfigObject> {
+  const { project, overrides } = options;
   const [tsParser, tsPlugin] = await Promise.all([
     await interopDefault(import('@typescript-eslint/parser')),
     await interopDefault(import('@typescript-eslint/eslint-plugin'))
@@ -173,7 +170,7 @@ export async function typescript(
     ],
     '@typescript-eslint/prefer-optional-chain': 'error',
     '@typescript-eslint/prefer-readonly': 'error',
-    '@typescript-eslint/prefer-readonly-parameter-types': 'error',
+    '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'error',
     '@typescript-eslint/prefer-regexp-exec': 'error',
     '@typescript-eslint/prefer-return-this-type': 'error',
@@ -184,19 +181,7 @@ export async function typescript(
     '@typescript-eslint/require-await': 'error',
     '@typescript-eslint/restrict-plus-operands': 'error',
     '@typescript-eslint/restrict-template-expressions': 'error',
-    '@typescript-eslint/strict-boolean-expressions': [
-      'error',
-      {
-        allowString: false,
-        allowNumber: false,
-        allowNullableObject: true,
-        allowNullableBoolean: false,
-        allowNullableString: false,
-        allowNullableNumber: false,
-        allowNullableEnum: false,
-        allowAny: false
-      }
-    ],
+    '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': [
       'error',
       {
@@ -216,7 +201,6 @@ export async function typescript(
 
   return {
     files,
-    ignores,
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

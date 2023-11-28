@@ -7,5 +7,5 @@ export enum GlobIgnore {
   DIST = '**/dist',
   NODE_MODULES = '**/node_modules',
   OUT = '**/out',
-  TEMP = '**/?(.)temp',
+  TEMP = '**/.temp',
 }
