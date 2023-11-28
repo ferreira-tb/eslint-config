@@ -264,7 +264,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
       }
     },
     {
-      files: [Glob.TYPESCRIPT, Glob.VUE],
+      files: [Glob.VUE],
       languageOptions: {
         parser: vueParser,
         parserOptions: {
