@@ -6,8 +6,10 @@ export const enum Glob {
 }
 
 export enum GlobIgnore {
+  CACHE = '**/cache',
   DIST = '**/dist',
+  LOG = '**/log?(s)',
   NODE_MODULES = '**/node_modules',
   OUT = '**/out',
-  TEMP = '**/.temp'
+  TEMP = '**/?(.)temp'
 }
