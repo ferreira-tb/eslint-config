@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import process from 'node:process';
 import { interopDefault } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
 import { Glob } from '../utils/enum';
@@ -9,10 +10,10 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
   const { overrides, vue: isVueEnabled } = options;
   if (!isVueEnabled) return [];
 
-  const [vueParser, vuePlugin, tsParser] = await Promise.all([
-    await interopDefault(import('vue-eslint-parser')),
+  const [vuePlugin, vueParser, tsParser] = await Promise.all([
     // @ts-expect-error no types
     await interopDefault(import('eslint-plugin-vue')),
+    await interopDefault(import('vue-eslint-parser')),
     await interopDefault(import('@typescript-eslint/parser'))
   ]);
 
@@ -270,6 +271,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
         parserOptions: {
           parser: tsParser,
           project: options.project,
+          tsconfigRootDir: process.cwd(),
           extraFileExtensions: ['.vue'],
           sourceType: 'module',
           ecmaVersion: 'latest',

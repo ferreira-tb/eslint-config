@@ -207,7 +207,8 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
       parser: tsParser,
       parserOptions: {
         project,
-        tsconfigRootDir: process.cwd()
+        tsconfigRootDir: process.cwd(),
+        extraFileExtensions: options.vue ? ['.vue'] : []
       }
     },
     plugins: {
