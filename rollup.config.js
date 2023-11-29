@@ -8,8 +8,8 @@ export default defineConfig({
   external: [
     /^node:/,
     /@typescript-eslint/,
-    'eslint-config-prettier',
-    'eslint-plugin-vue',
+    /^eslint-plugin-/,
+    /^eslint-config-/,
     'globals',
     'vue-eslint-parser'
   ],

@@ -1,8 +1,11 @@
 import process from 'node:process';
+import { Glob } from '../utils/enum';
 import { interopDefault } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
-import { Glob } from '../utils/enum';
 
+/**
+ * @see https://typescript-eslint.io/rules/
+ */
 export async function typescript(options: ConfigOptions): Promise<ConfigObject> {
   const { project, overrides } = options;
   const [tsParser, tsPlugin] = await Promise.all([

@@ -4,10 +4,10 @@ export interface ConfigObject {
   ignores?: Ignores['ignores'];
   languageOptions: {
     ecmaVersion?: 'latest';
-    sourceType?: 'module';
+    globals?: Record<string, boolean | 'readonly' | 'writeable'>;
     parser?: unknown;
     parserOptions?: Record<string, unknown>;
-    globals?: Record<string, boolean | 'readonly' | 'writeable'>;
+    sourceType?: 'module';
   };
   plugins?: Record<string, unknown>;
   processor?: unknown;
@@ -15,17 +15,21 @@ export interface ConfigObject {
 }
 
 export interface ConfigOptions {
+  /** @default true */
+  perfectionist?: boolean;
+  /** @default true */
   prettier?: boolean;
+  /** @default false */
   vue?: boolean;
-  jsx?: boolean;
-  /** `tsconfig.json` files for Typescript. */
-  project: string[];
+
   ignores?: Ignores['ignores'];
   overrides?: {
     javascript?: Rules;
     typescript?: Rules;
     vue?: Rules;
   };
+  /** `tsconfig.json` files for Typescript. */
+  project: string[];
 }
 
 export interface Ignores {

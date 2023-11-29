@@ -1,7 +1,10 @@
 import globals from 'globals';
-import type { ConfigObject, ConfigOptions } from '../types';
 import { Glob } from '../utils/enum';
+import type { ConfigObject, ConfigOptions } from '../types';
 
+/**
+ * @see https://eslint.org/docs/latest/rules/
+ */
 export function javascript(options: ConfigOptions): ConfigObject {
   const { overrides } = options;
 

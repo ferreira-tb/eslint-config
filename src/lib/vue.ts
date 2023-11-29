@@ -2,10 +2,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import process from 'node:process';
+import { Glob } from '../utils/enum';
 import { interopDefault } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
-import { Glob } from '../utils/enum';
 
+/**
+ * @see https://eslint.vuejs.org/rules/
+ */
 export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
   const { overrides, vue: isVueEnabled } = options;
   if (!isVueEnabled) return [];
@@ -274,10 +277,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
           tsconfigRootDir: process.cwd(),
           extraFileExtensions: ['.vue'],
           sourceType: 'module',
-          ecmaVersion: 'latest',
-          ecmaFeatures: {
-            jsx: Boolean(options.jsx)
-          }
+          ecmaVersion: 'latest'
         }
       }
     },

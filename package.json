@@ -22,6 +22,7 @@
     "deps": "pnpm exec taze -w -f",
     "format": "pnpm exec prettier . --write",
     "format-check": "pnpm exec prettier . --check",
+    "lint": "eslint . --config eslint.config.js --cache",
     "minify": "pnpm exec minify-it dist",
     "prepare": "husky install",
     "release": "miho -l publish",
@@ -32,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-perfectionist": "^2.5.0",
     "eslint-plugin-vue": "^9.18.1",
     "globals": "^13.23.0",
     "vue-eslint-parser": "^9.3.2"
