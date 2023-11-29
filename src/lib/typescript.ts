@@ -217,7 +217,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/prefer-return-this-type': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     '@typescript-eslint/prefer-ts-expect-error': 'error',
-    '@typescript-eslint/promise-function-async': 'error',
+    '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/require-array-sort-compare': 'error',
 
     'require-await': 'off',
