@@ -167,7 +167,12 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-unsafe-unary-minus': 'error',
 
     'no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-expressions': 'error',
+    '@typescript-eslint/no-unused-expressions': [
+      'error',
+      {
+        allowTaggedTemplates: true
+      }
+    ],
 
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
