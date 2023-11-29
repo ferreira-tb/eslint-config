@@ -212,7 +212,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/require-valid-default-prop': 'error',
     'vue/return-in-computed-property': 'error',
     'vue/return-in-emits-validator': 'error',
-    'vue/this-in-template': ['error', 'always'],
+    'vue/this-in-template': ['error', 'never'],
     'vue/use-v-on-exact': 'error',
     'vue/v-bind-style': ['error', 'shorthand'],
     'vue/v-for-delimiter-style': ['error', 'of'],
