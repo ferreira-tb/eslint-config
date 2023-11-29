@@ -1,5 +1,5 @@
-import { PackageManager, defineConfig } from 'miho';
 import { Octokit } from '@octokit/core';
+import { PackageManager, defineConfig } from 'miho';
 
 export default defineConfig({
   packageManager: PackageManager.PNPM,
