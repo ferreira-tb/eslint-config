@@ -103,7 +103,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
       'error',
       {
         allowInGenericTypeArguments: true,
-        allowAsThisParameter: false
+        allowAsThisParameter: true
       }
     ],
 
