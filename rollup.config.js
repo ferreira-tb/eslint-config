@@ -8,9 +8,13 @@ export default defineConfig({
   external: [
     /^node:/,
     /@typescript-eslint/,
-    /^eslint-plugin-/,
-    /^eslint-config-/,
     'globals',
+    '@typescript-eslint/parser',
+    '@typescript-eslint/eslint-plugin',
+    'eslint-config-prettier',
+    'eslint-plugin-perfectionist',
+    'eslint-plugin-unicorn',
+    'eslint-plugin-vue',
     'vue-eslint-parser'
   ],
   output: [
