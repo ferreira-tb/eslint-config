@@ -10,8 +10,8 @@ import type { ConfigObject, ConfigOptions, Rules } from '../types';
  * @see https://eslint.vuejs.org/rules/
  */
 export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
-  const { overrides, vue: isVueEnabled } = options;
-  if (!isVueEnabled) return [];
+  const { overrides, vue: enabled } = options;
+  if (!enabled) return [];
 
   const [vuePlugin, vueParser, tsParser] = await Promise.all([
     // @ts-expect-error no types
@@ -258,7 +258,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/valid-v-slot': 'error',
     'vue/valid-v-text': 'error',
 
-    ...(overrides?.vue ?? {})
+    ...overrides?.vue
   };
 
   return [

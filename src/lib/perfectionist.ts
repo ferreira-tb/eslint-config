@@ -1,10 +1,13 @@
 import { interopDefault } from '../utils';
-import type { ConfigObject } from '../types';
+import type { ConfigObject, ConfigOptions } from '../types';
 
 /**
  * @see https://eslint-plugin-perfectionist.azat.io/rules/
  */
-export async function perfectionist(): Promise<Partial<ConfigObject>> {
+export async function perfectionist(options: ConfigOptions): Promise<Partial<ConfigObject>> {
+  const { overrides, perfectionist: enabled = true } = options;
+  if (!enabled) return {};
+
   const plugin = await interopDefault(import('eslint-plugin-perfectionist'));
 
   return {
@@ -98,7 +101,9 @@ export async function perfectionist(): Promise<Partial<ConfigObject>> {
           order: 'asc',
           'partition-by-new-line': true
         }
-      ]
+      ],
+
+      ...overrides?.perfectionist
     }
   };
 }

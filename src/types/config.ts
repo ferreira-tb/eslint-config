@@ -19,13 +19,17 @@ export interface ConfigOptions {
   perfectionist?: boolean;
   /** @default true */
   prettier?: boolean;
+  /** @default true */
+  unicorn?: boolean;
   /** @default false */
   vue?: boolean;
 
   ignores?: Ignores['ignores'];
   overrides?: {
     javascript?: Rules;
+    perfectionist?: Rules;
     typescript?: Rules;
+    unicorn?: Rules;
     vue?: Rules;
   };
   /** `tsconfig.json` files for Typescript. */

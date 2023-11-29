@@ -170,7 +170,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'valid-typeof': 'error',
       yoda: ['error', 'never'],
 
-      ...(overrides?.javascript ?? {})
+      ...overrides?.javascript
     }
   };
 }

@@ -199,7 +199,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
       }
     ],
 
-    ...(overrides?.typescript ?? {})
+    ...overrides?.typescript
   };
 
   return {
