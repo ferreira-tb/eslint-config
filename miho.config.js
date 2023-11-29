@@ -4,6 +4,7 @@ import { PackageManager, defineConfig } from 'miho';
 export default defineConfig({
   packageManager: PackageManager.PNPM,
   recursive: false,
+  verbose: true,
   commit: {
     push: true,
     all: true
