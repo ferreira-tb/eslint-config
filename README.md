@@ -3,4 +3,4 @@
 Opinionated config for ESLint.
 
 - TypeScript only.
-- Optional support Vue support.
+- Optional Vue support.
