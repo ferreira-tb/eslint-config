@@ -157,6 +157,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/no-template-target-blank': 'error',
     'vue/no-textarea-mustache': 'error',
     'vue/no-unused-components': 'error',
+    'vue/no-unused-emit-declarations': 'error',
     'vue/no-unused-properties': 'error',
     'vue/no-unused-refs': 'error',
     'vue/no-unused-vars': [
