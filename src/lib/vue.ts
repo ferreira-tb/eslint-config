@@ -190,7 +190,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/prefer-true-attribute-shorthand': 'error',
     'vue/prop-name-casing': ['error', 'camelCase'],
     'vue/require-component-is': 'error',
-    'vue/require-default-prop': 'error',
+    'vue/require-default-prop': 'off',
     'vue/require-explicit-emits': [
       'error',
       {
