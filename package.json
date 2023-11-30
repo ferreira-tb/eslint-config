@@ -18,15 +18,13 @@
     "*.{?(c|m)@(j|t)s,css,vue,md,json}": "prettier --write"
   },
   "scripts": {
-    "build": "pnpm rollup",
+    "build": "rollup --config rollup.config.js",
     "deps": "pnpm exec taze -w -f",
     "format": "pnpm exec prettier . --write",
     "format-check": "pnpm exec prettier . --check",
     "lint": "eslint . --config eslint.config.js --cache",
-    "minify": "pnpm exec minify-it dist",
     "prepare": "husky install",
     "release": "miho -l publish",
-    "rollup": "rollup --config rollup.config.js",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
