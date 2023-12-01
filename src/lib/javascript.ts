@@ -60,7 +60,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'no-delete-var': 'error',
       'no-dupe-else-if': 'error',
       'no-duplicate-case': 'error',
-      'no-duplicate-imports': ['error', { includeExports: true }],
+      'no-duplicate-imports': ['error', { includeExports: false }],
       'no-else-return': 'error',
       'no-empty': ['error', { allowEmptyCatch: true }],
       'no-empty-character-class': 'error',
