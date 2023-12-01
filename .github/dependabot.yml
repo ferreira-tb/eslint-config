@@ -2,6 +2,13 @@ version: 2
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
+    groups:
+      non-major:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
     schedule:
       interval: 'weekly'
 
