@@ -53,8 +53,8 @@ devDependencies:
     specifier: ^15.1.0
     version: 15.2.0
   miho:
-    specifier: ^1.7.13
-    version: 1.7.13
+    specifier: ^2.0.0
+    version: 2.0.0
   npm-run-all2:
     specifier: ^6.1.1
     version: 6.1.1
@@ -2410,8 +2410,8 @@ packages:
       braces: 3.0.2
       picomatch: 2.3.1
 
-  /miho@1.7.13:
-    resolution: {integrity: sha512-rxxsfp2zT422mHBpBwnMV0xtEV/RNhXp63lnW1GBIaHcovpgSZCTOItZUcM/XgyoxpD8a2E9bLvYdE29MaB0Bw==}
+  /miho@2.0.0:
+    resolution: {integrity: sha512-lDvYF48mAWXodg9oIQIvNqxSL3PXTe32+WOlPMuNQYCRsmvu0T7AyoQASTTw+LYYvv2GwSY6vfOgUakPtz+l/Q==}
     hasBin: true
     dependencies:
       c12: 1.5.1
