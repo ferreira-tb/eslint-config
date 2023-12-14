@@ -10,7 +10,6 @@ export default defineConfig({
     all: true
   },
   jobs: {
-    skip: ['publish'],
     build: true,
     publish: async () => {
       const { version } = await import('./package.json');
