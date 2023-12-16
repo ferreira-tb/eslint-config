@@ -42,7 +42,7 @@
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^20.10.4",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "miho": "^2.2.2",
