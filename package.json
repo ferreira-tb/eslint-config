@@ -60,7 +60,7 @@
     "eslint": "^8.0.0"
   },
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
