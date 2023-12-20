@@ -103,7 +103,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'no-sequences': 'error',
       'no-shadow-restricted-names': 'error',
       'no-sparse-arrays': 'error',
-      'no-template-curly-in-string': 'off',
+      'no-template-curly-in-string': 'error',
       'no-undef-init': 'error',
       'no-undefined': 'error',
       'no-unexpected-multiline': 'error',
