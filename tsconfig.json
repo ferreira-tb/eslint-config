@@ -11,7 +11,8 @@
     "removeComments": false,
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
-    "declaration": false,
+    "declaration": true,
+    "declarationDir": "dist",
 
     "alwaysStrict": true,
     "noImplicitAny": true,
