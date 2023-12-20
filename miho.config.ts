@@ -1,3 +1,4 @@
+import { execa } from 'execa';
 import { Octokit } from '@octokit/core';
 import { PackageManager, defineConfig } from 'miho';
 
@@ -10,7 +11,9 @@ export default defineConfig({
     all: true
   },
   jobs: {
-    build: true,
+    build: async () => {
+      await execa('pnpm', ['build'], { stdio: 'inherit' });
+    },
     publish: async () => {
       const { version } = await import('./package.json');
       const { GITHUB_TOKEN } = await import('./config.json');
