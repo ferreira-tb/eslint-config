@@ -3,7 +3,14 @@
 import eslintConfigPrettier from 'eslint-config-prettier';
 import { getIgnores } from './utils';
 import type { ConfigObject, ConfigOptions } from './types';
-import { javascript, perfectionist as perfect, typescript, unicorn as uni, vue } from './lib';
+import {
+  javascript,
+  perfectionist as perfect,
+  typescript,
+  unicorn as uni,
+  vitest,
+  vue
+} from './lib';
 
 async function config(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
   const { prettier = true } = options;
@@ -13,6 +20,7 @@ async function config(options: ConfigOptions): Promise<Partial<ConfigObject>[]> 
     ...(await vue(options)),
     perfect(options),
     uni(options),
+    vitest(options),
     prettier ? eslintConfigPrettier : {},
     {
       ignores: [...getIgnores(), ...(options.ignores ?? [])]

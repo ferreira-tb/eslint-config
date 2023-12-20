@@ -22,6 +22,8 @@ export interface ConfigOptions {
   /** @default true */
   unicorn?: boolean;
   /** @default false */
+  vitest?: boolean;
+  /** @default false */
   vue?: boolean;
 
   ignores?: Ignores['ignores'];
@@ -30,6 +32,7 @@ export interface ConfigOptions {
     perfectionist?: Rules;
     typescript?: Rules;
     unicorn?: Rules;
+    vitest?: Rules;
     vue?: Rules;
   };
   /** `tsconfig.json` files for Typescript. */
