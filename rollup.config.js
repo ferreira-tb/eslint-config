@@ -14,6 +14,7 @@ export default defineConfig({
     'eslint-config-prettier',
     'eslint-plugin-perfectionist',
     'eslint-plugin-unicorn',
+    'eslint-plugin-vitest',
     'eslint-plugin-vue',
     'vue-eslint-parser'
   ],
