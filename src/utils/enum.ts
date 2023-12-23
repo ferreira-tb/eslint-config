@@ -12,5 +12,6 @@ export enum GlobIgnore {
   LOG = '**/log?(s)',
   NODE_MODULES = '**/node_modules',
   OUT = '**/out',
+  TARGET = '**/target',
   TEMP = '**/?(.)temp'
 }
