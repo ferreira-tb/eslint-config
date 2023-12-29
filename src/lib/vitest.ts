@@ -33,7 +33,6 @@ export async function vitest(options: ConfigOptions): Promise<Partial<ConfigObje
       'vitest/no-import-node-test': 'error',
       'vitest/no-standalone-expect': 'error',
       'vitest/no-test-return-statement': 'error',
-      'vitest/prefer-called-exactly-once-with': 'error',
       'vitest/prefer-comparison-matcher': 'error',
       'vitest/prefer-each': 'error',
       'vitest/prefer-equality-matcher': 'error',
