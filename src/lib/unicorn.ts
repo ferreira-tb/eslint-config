@@ -24,7 +24,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/consistent-function-scoping': [
         'error',
         {
-          checkArrowFunctions: true
+          checkArrowFunctions: false
         }
       ],
       'unicorn/custom-error-definition': 'error',
