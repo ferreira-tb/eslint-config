@@ -1,11 +1,11 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.13.1",
   "homepage": "https://github.com/ferreira-tb/eslint-config",
   "repository": {
     "type": "git",
@@ -19,21 +19,20 @@
   },
   "scripts": {
     "build": "rollup --config rollup.config.js",
-    "deps": "pnpm exec taze -w -f -l",
-    "format": "pnpm exec prettier . --write",
-    "format-check": "pnpm exec prettier . --check",
+    "deps": "taze -w -f -l",
+    "format": "prettier . --write",
+    "format-check": "prettier . --check",
     "lint": "eslint . --config eslint.config.js --cache",
     "prepare": "husky install",
-    "release": "miho -l publish",
-    "typecheck": "tsc --noEmit"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.5.0",
     "eslint-plugin-unicorn": "^50.0.1",
-    "eslint-plugin-vitest": "^0.3.18",
+    "eslint-plugin-vitest": "^0.3.20",
     "eslint-plugin-vue": "^9.19.2",
     "globals": "^13.24.0",
     "vue-eslint-parser": "^9.3.2"
@@ -47,16 +46,15 @@
     "execa": "^8.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "miho": "^2.2.3",
     "npm-run-all2": "^6.1.1",
     "prettier": "^3.1.1",
     "rollup": "^4.9.1",
-    "taze": "^0.13.0",
+    "taze": "^0.13.1",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "typescript": "5.3.3",
     "vite": "^5.0.10",
-    "vite-plugin-dts": "^3.6.4"
+    "vite-plugin-dts": "^3.7.0"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
