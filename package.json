@@ -1,11 +1,11 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@8.13.1",
+  "packageManager": "pnpm@8.14.0",
   "homepage": "https://github.com/ferreira-tb/eslint-config",
   "repository": {
     "type": "git",
@@ -27,8 +27,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.16.0",
-    "@typescript-eslint/parser": "^6.16.0",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.5.0",
     "eslint-plugin-unicorn": "^50.0.1",
@@ -41,19 +41,19 @@
     "@octokit/core": "^5.0.2",
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^20.10.5",
+    "@types/node": "^20.10.6",
     "eslint": "^8.56.0",
     "execa": "^8.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "npm-run-all2": "^6.1.1",
     "prettier": "^3.1.1",
-    "rollup": "^4.9.1",
+    "rollup": "^4.9.3",
     "taze": "^0.13.1",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "typescript": "5.3.3",
-    "vite": "^5.0.10",
+    "vite": "^5.0.11",
     "vite-plugin-dts": "^3.7.0"
   },
   "peerDependencies": {

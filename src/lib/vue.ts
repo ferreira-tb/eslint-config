@@ -220,13 +220,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/use-v-on-exact': 'error',
     'vue/v-bind-style': ['error', 'shorthand'],
     'vue/v-for-delimiter-style': ['error', 'of'],
-    'vue/v-on-handler-style': [
-      'error',
-      ['method', 'inline-function'],
-      {
-        ignoreIncludesComment: false
-      }
-    ],
+    'vue/v-on-handler-style': 'off',
     'vue/v-on-style': ['error', 'shorthand'],
     'vue/v-slot-style': [
       'error',
