@@ -100,7 +100,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
       }
     ],
     'vue/match-component-file-name': [
-      'error',
+      'off',
       {
         extensions: ['tsx', 'vue'],
         shouldMatchCase: false
