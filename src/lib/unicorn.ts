@@ -35,7 +35,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/no-await-expression-member': 'error',
       'unicorn/no-invalid-remove-event-listener': 'error',
       'unicorn/no-thenable': 'error',
-      'unicorn/no-typeof-undefined': 'error',
+      'unicorn/no-typeof-undefined': 'off',
       'unicorn/no-useless-fallback-in-spread': 'error',
       'unicorn/no-useless-length-check': 'error',
       'unicorn/no-useless-promise-resolve-reject': 'error',
