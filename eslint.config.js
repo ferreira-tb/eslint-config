@@ -1,5 +1,5 @@
 import config from './dist/index.mjs';
 
 export default config({
-  project: ['./tsconfig.json']
+  project: ['./tsconfig.json', './tsconfig.eslint.json']
 });
