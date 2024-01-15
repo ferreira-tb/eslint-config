@@ -71,6 +71,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/method-signature-style': ['error', 'property'],
+    '@typescript-eslint/no-array-delete': 'error',
     '@typescript-eslint/no-base-to-string': 'error',
     '@typescript-eslint/no-confusing-non-null-assertion': 'error',
     '@typescript-eslint/no-confusing-void-expression': [
@@ -188,6 +189,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-useless-constructor': 'error',
 
     '@typescript-eslint/no-useless-empty-export': 'error',
+    '@typescript-eslint/no-useless-template-literals': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
     '@typescript-eslint/prefer-as-const': 'error',
     '@typescript-eslint/prefer-enum-initializers': 'error',
@@ -210,6 +212,10 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
       }
     ],
     '@typescript-eslint/prefer-optional-chain': 'error',
+
+    'prefer-promise-reject-errors': 'off',
+    '@typescript-eslint/prefer-promise-reject-errors': 'error',
+
     '@typescript-eslint/prefer-readonly': 'error',
     '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'error',
