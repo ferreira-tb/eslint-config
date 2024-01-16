@@ -1,7 +1,6 @@
 {
-  "include": ["src/**/*", "index.d.ts"],
+  "include": ["src/**/*"],
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "esnext",
     "lib": ["esnext", "dom"],
     "module": "esnext",

@@ -18,7 +18,7 @@
     "*.{?(c|m)@(j|t)s,css,vue,md,json}": "prettier --write"
   },
   "scripts": {
-    "build": "rollup --config rollup.config.js",
+    "build": "vite build",
     "bump": "miho bump -k --add .",
     "format": "prettier . --write",
     "format-check": "prettier . --check",
@@ -39,19 +39,13 @@
     "vue-eslint-parser": "^9.4.0"
   },
   "devDependencies": {
-    "@octokit/core": "^5.0.2",
-    "@rollup/plugin-typescript": "^11.1.6",
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^20.11.2",
+    "@types/node": "^20.11.4",
     "eslint": "^8.56.0",
-    "execa": "^8.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "npm-run-all2": "^6.1.1",
     "prettier": "^3.2.2",
-    "rollup": "^4.9.5",
     "taze": "^0.13.1",
-    "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "typescript": "5.3.3",
     "vite": "^5.0.11",

@@ -8,6 +8,7 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
   const { overrides, perfectionist: enabled = true } = options;
   if (!enabled) return {};
 
+  // @ts-expect-error: not typed
   const plugin = await interopDefault(import('eslint-plugin-perfectionist'));
 
   return {

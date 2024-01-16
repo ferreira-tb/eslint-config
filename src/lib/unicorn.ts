@@ -8,6 +8,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
   const { overrides, unicorn: enabled = true } = options;
   if (!enabled) return {};
 
+  // @ts-expect-error: not typed
   const plugin = await interopDefault(import('eslint-plugin-unicorn'));
 
   return {
