@@ -59,10 +59,12 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/define-macros-order': [
       'error',
       {
-        order: ['defineProps', 'defineEmits']
+        order: ['defineOptions', 'defineModel', 'defineProps', 'defineEmits', 'defineSlots'],
+        defineExposeLast: true
       }
     ],
     'vue/define-props-declaration': ['error', 'type-based'],
+    'vue/enforce-style-attribute': ['error', { allow: ['scoped'] }],
     'vue/first-attribute-linebreak': 'off',
     'vue/html-button-has-type': [
       'error',
@@ -76,7 +78,11 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
       'error',
       {
         singleline: 'never',
-        multiline: 'always'
+        multiline: 'always',
+        selfClosingTag: {
+          singleline: 'never',
+          multiline: 'always'
+        }
       }
     ],
     'vue/html-closing-bracket-spacing': [
