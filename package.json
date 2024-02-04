@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -19,12 +19,11 @@
   },
   "scripts": {
     "build": "vite build",
-    "bump": "miho bump -k --add .",
     "format": "prettier . --write",
     "format-check": "prettier . --check",
     "lint": "eslint . --config eslint.config.js --cache",
     "prepare": "husky install",
-    "release": "pnpm run build && pnpm run bump && pnpm publish",
+    "release": "pnpm run build && pnpm publish",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
