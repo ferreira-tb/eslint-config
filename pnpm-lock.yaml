@@ -18,8 +18,8 @@ dependencies:
     specifier: ^2.5.0
     version: 2.5.0(eslint@8.56.0)(typescript@5.3.3)(vue-eslint-parser@9.4.2)
   eslint-plugin-unicorn:
-    specifier: ^51.0.0
-    version: 51.0.0(eslint@8.56.0)
+    specifier: ^51.0.1
+    version: 51.0.1(eslint@8.56.0)
   eslint-plugin-vitest:
     specifier: ^0.3.21
     version: 0.3.21(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -1600,8 +1600,8 @@ packages:
       - typescript
     dev: false
 
-  /eslint-plugin-unicorn@51.0.0(eslint@8.56.0):
-    resolution: {integrity: sha512-104L+VrZQ0RlyTYQPmF0ofoN1/rot1U/BoCSUDTTiPgumzA/QUzDwUqbR4Q0laOYXi5sYI2HDrJQ/b5PlJteCA==}
+  /eslint-plugin-unicorn@51.0.1(eslint@8.56.0):
+    resolution: {integrity: sha512-MuR/+9VuB0fydoI0nIn2RDA5WISRn4AsJyNSaNKLVwie9/ONvQhxOBbkfSICBPnzKrB77Fh6CZZXjgTt/4Latw==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>=8.56.0'
