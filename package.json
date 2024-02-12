@@ -27,8 +27,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.5.0",
     "eslint-plugin-unicorn": "^51.0.1",
@@ -51,7 +51,8 @@
     "vite-plugin-dts": "^3.7.2"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.0"
   },
   "engines": {
     "node": ">=20"

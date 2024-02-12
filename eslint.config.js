@@ -1,4 +1,4 @@
-import config from './dist/index.mjs';
+import config from './dist/index.js';
 
 export default config({
   project: ['./tsconfig.json'],
