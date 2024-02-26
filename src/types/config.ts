@@ -45,8 +45,5 @@ export interface Ignores {
 
 export type Severity = 'error' | 'warn' | 'off' | 0 | 1;
 
-export type RuleOption =
-  | [Severity, string | Record<string, unknown>]
-  | [Severity, string, Record<string, unknown>];
-
-export type Rules = Record<string, Severity | RuleOption>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type Rules = Record<string, Severity | any[]>;

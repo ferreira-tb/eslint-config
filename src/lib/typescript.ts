@@ -46,6 +46,10 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
 
     '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
+
+    'consistent-return': 'off',
+    '@typescript-eslint/consistent-return': 'error',
+
     '@typescript-eslint/consistent-type-assertions': [
       'error',
       { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' }
@@ -71,6 +75,32 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/method-signature-style': ['error', 'property'],
+
+    camelcase: 'off',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: [
+          'classicAccessor',
+          'classMethod',
+          'classProperty',
+          'function',
+          'objectLiteralMethod',
+          'parameter',
+          'parameterProperty',
+          'typeMethod',
+          'typeParameter',
+          'typeProperty',
+          'variable'
+        ],
+        format: ['camelCase']
+      },
+      {
+        selector: ['class', 'enum', 'enumMember', 'interface', 'typeAlias'],
+        format: ['PascalCase']
+      }
+    ],
+
     '@typescript-eslint/no-array-delete': 'error',
     '@typescript-eslint/no-base-to-string': 'error',
     '@typescript-eslint/no-confusing-non-null-assertion': 'error',
