@@ -89,14 +89,13 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
           'parameter',
           'parameterProperty',
           'typeMethod',
-          'typeParameter',
           'typeProperty',
           'variable'
         ],
         format: ['camelCase']
       },
       {
-        selector: ['class', 'enum', 'enumMember', 'interface', 'typeAlias'],
+        selector: ['class', 'enum', 'enumMember', 'interface', 'typeAlias', 'typeParameter'],
         format: ['PascalCase']
       }
     ],
