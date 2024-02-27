@@ -85,11 +85,8 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
           'classMethod',
           'classProperty',
           'function',
-          'objectLiteralMethod',
           'parameter',
           'parameterProperty',
-          'typeMethod',
-          'typeProperty',
           'variable'
         ],
         format: ['camelCase']
