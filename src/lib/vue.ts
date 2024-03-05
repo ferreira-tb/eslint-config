@@ -225,7 +225,13 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/return-in-emits-validator': 'error',
     'vue/this-in-template': ['error', 'never'],
     'vue/use-v-on-exact': 'error',
-    'vue/v-bind-style': ['error', 'shorthand'],
+    'vue/v-bind-style': [
+      'error',
+      'shorthand',
+      {
+        sameNameShorthand: 'always'
+      }
+    ],
     'vue/v-for-delimiter-style': ['error', 'of'],
     'vue/v-on-handler-style': 'off',
     'vue/v-on-style': ['error', 'shorthand'],
