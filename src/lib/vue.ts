@@ -203,7 +203,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
         allowProps: false
       }
     ],
-    'vue/require-explicit-slots': 'off',
+    'vue/require-explicit-slots': 'error',
     'vue/require-macro-variable-name': [
       'error',
       {
