@@ -151,7 +151,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
           memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
         }
       ],
-      'symbol-description': 'error',
+      'symbol-description': 'off',
       'use-isnan': 'error',
       'valid-typeof': 'error',
       yoda: ['error', 'never'],
