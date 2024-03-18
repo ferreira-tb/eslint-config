@@ -15,7 +15,7 @@ dependencies:
     specifier: ^9.1.0
     version: 9.1.0(eslint@8.57.0)
   eslint-plugin-perfectionist:
-    specifier: ^2.6.0
+    specifier: ^2.7.0
     version: 2.7.0(eslint@8.57.0)(typescript@5.4.2)(vue-eslint-parser@9.4.2)
   eslint-plugin-unicorn:
     specifier: ^51.0.1
@@ -38,7 +38,7 @@ devDependencies:
     specifier: ^6.11.3
     version: 6.11.3
   '@types/node':
-    specifier: ^20.11.26
+    specifier: ^20.11.28
     version: 20.11.28
   eslint:
     specifier: ^8.57.0

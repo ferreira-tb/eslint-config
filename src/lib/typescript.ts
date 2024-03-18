@@ -33,6 +33,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
         minimumDescriptionLength: 3
       }
     ],
+    '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
 
     'class-methods-use-this': 'off',
