@@ -140,7 +140,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'prefer-rest-params': 'error',
       'prefer-spread': 'error',
       'prefer-template': 'error',
-      'require-atomic-updates': 'error',
+      'require-atomic-updates': ['error', { allowProperties: true }],
       'sort-imports': [
         'error',
         {
