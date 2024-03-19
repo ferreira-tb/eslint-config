@@ -119,7 +119,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
     '@typescript-eslint/no-extra-non-null-assertion': 'error',
     '@typescript-eslint/no-extraneous-class': 'error',
-    '@typescript-eslint/no-floating-promises': ['error', { ignoreVoid: true }],
+    '@typescript-eslint/no-floating-promises': ['error', { ignoreIIFE: true, ignoreVoid: true }],
     '@typescript-eslint/no-for-in-array': 'error',
 
     'no-implied-eval': 'off',
@@ -273,6 +273,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
         ignoreDifferentlyNamedParameters: true
       }
     ],
+    '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
 
     ...overrides?.typescript
   };
