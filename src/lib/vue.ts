@@ -53,7 +53,11 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     ],
     'vue/component-api-style': ['error', ['script-setup']],
     'vue/component-definition-name-casing': ['error', 'PascalCase'],
-    'vue/component-name-in-template-casing': ['error', 'kebab-case'],
+    'vue/component-name-in-template-casing': [
+      'error',
+      'kebab-case',
+      { registeredComponentsOnly: false }
+    ],
     'vue/custom-event-name-casing': ['error', 'kebab-case'],
     'vue/define-emits-declaration': ['error', 'type-based'],
     'vue/define-macros-order': [
