@@ -169,10 +169,6 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-shadow': 'error',
 
     '@typescript-eslint/no-this-alias': 'error',
-
-    'no-throw-literal': 'off',
-    '@typescript-eslint/no-throw-literal': 'error',
-
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
       'error',
       {
@@ -218,6 +214,16 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-useless-empty-export': 'error',
     '@typescript-eslint/no-useless-template-literals': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
+
+    'no-throw-literal': 'off',
+    '@typescript-eslint/only-throw-error': [
+      'error',
+      {
+        allowThrowingAny: false,
+        allowThrowingUnknown: false
+      }
+    ],
+
     '@typescript-eslint/prefer-as-const': 'error',
     '@typescript-eslint/prefer-enum-initializers': 'error',
     '@typescript-eslint/prefer-find': 'error',
