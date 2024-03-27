@@ -16,26 +16,6 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
       perfectionist: plugin
     },
     rules: {
-      'perfectionist/sort-classes': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          groups: [
-            'index-signature',
-            'property',
-            'private-property',
-            'constructor',
-            'method',
-            'private-method',
-            ['get-method', 'set-method'],
-            'static-property',
-            'static-method',
-            'static-private-method',
-            'unknown'
-          ]
-        }
-      ],
       'perfectionist/sort-enums': [
         'error',
         {
