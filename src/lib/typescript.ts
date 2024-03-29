@@ -81,20 +81,16 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/naming-convention': [
       'error',
       {
-        selector: [
-          'classicAccessor',
-          'classMethod',
-          'classProperty',
-          'function',
-          'parameter',
-          'parameterProperty',
-          'variable'
-        ],
-        format: ['camelCase']
+        selector: ['classProperty', 'variable'],
+        format: ['strictCamelCase', 'UPPER_CASE']
+      },
+      {
+        selector: ['classicAccessor', 'classMethod', 'function', 'parameter', 'parameterProperty'],
+        format: ['strictCamelCase']
       },
       {
         selector: ['class', 'enum', 'enumMember', 'interface', 'typeAlias', 'typeParameter'],
-        format: ['PascalCase']
+        format: ['StrictPascalCase']
       }
     ],
 
