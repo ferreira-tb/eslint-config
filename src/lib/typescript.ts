@@ -9,8 +9,8 @@ import type { ConfigObject, ConfigOptions, Rules } from '../types';
 export async function typescript(options: ConfigOptions): Promise<ConfigObject> {
   const { project, overrides } = options;
   const [tsParser, tsPlugin] = await Promise.all([
-    await interopDefault(import('@typescript-eslint/parser')),
-    await interopDefault(import('@typescript-eslint/eslint-plugin'))
+    interopDefault(import('@typescript-eslint/parser')),
+    interopDefault(import('@typescript-eslint/eslint-plugin'))
   ]);
 
   const files = [Glob.TYPESCRIPT];

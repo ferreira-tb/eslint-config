@@ -15,9 +15,9 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
 
   const [vuePlugin, vueParser, tsParser] = await Promise.all([
     // @ts-expect-error no types
-    await interopDefault(import('eslint-plugin-vue')),
-    await interopDefault(import('vue-eslint-parser')),
-    await interopDefault(import('@typescript-eslint/parser'))
+    interopDefault(import('eslint-plugin-vue')),
+    interopDefault(import('vue-eslint-parser')),
+    interopDefault(import('@typescript-eslint/parser'))
   ]);
 
   const rules: Rules = {
@@ -63,7 +63,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/define-macros-order': [
       'error',
       {
-        order: ['defineOptions', 'defineModel', 'defineProps', 'defineEmits', 'defineSlots'],
+        order: ['defineOptions', 'defineProps', 'defineModel', 'defineEmits', 'defineSlots'],
         defineExposeLast: true
       }
     ],
