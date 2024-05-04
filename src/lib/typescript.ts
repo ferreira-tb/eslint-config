@@ -82,7 +82,8 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
       'error',
       {
         selector: ['classProperty', 'variable'],
-        format: ['strictCamelCase', 'UPPER_CASE']
+        format: ['strictCamelCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allowSingleOrDouble'
       },
       {
         selector: ['classicAccessor', 'classMethod', 'function', 'parameter', 'parameterProperty'],
