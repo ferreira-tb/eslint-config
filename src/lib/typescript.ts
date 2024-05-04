@@ -87,7 +87,8 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
       },
       {
         selector: ['classicAccessor', 'classMethod', 'function', 'parameter', 'parameterProperty'],
-        format: ['strictCamelCase']
+        format: ['strictCamelCase'],
+        leadingUnderscore: 'allowSingleOrDouble'
       },
       {
         selector: ['class', 'enum', 'enumMember', 'interface', 'typeAlias', 'typeParameter'],
