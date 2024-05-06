@@ -35,14 +35,9 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
         {
           type: 'line-length',
           order: 'asc',
+          'ignore-case': true,
           'newlines-between': 'never',
-          groups: [
-            ['style', 'side-effect'],
-            ['builtin', 'builtin-type'],
-            ['external', 'external-type'],
-            ['internal', 'internal-type'],
-            'unknown'
-          ]
+          groups: [['side-effect-style', 'side-effect'], 'unknown']
         }
       ],
       'perfectionist/sort-interfaces': [
@@ -51,6 +46,13 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
           type: 'natural',
           order: 'asc',
           'partition-by-new-line': true
+        }
+      ],
+      'perfectionist/sort-intersection-types': [
+        'error',
+        {
+          type: 'natural',
+          order: 'asc'
         }
       ],
       'perfectionist/sort-maps': [
