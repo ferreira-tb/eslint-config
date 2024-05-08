@@ -8,8 +8,8 @@ import type { ConfigObject, ConfigOptions } from '../types';
 export function javascript(options: ConfigOptions): ConfigObject {
   const { overrides } = options;
 
-  const files = [Glob.ALL];
-  if (options.vue) files.push(Glob.VUE);
+  const files = [Glob.All];
+  if (options.vue) files.push(Glob.Vue);
 
   return {
     files,
@@ -29,7 +29,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'array-callback-return': [
         'error',
         {
-          checkForEach: true,
+          checkForEach: false,
           allowVoid: true
         }
       ],

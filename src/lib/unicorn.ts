@@ -30,7 +30,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       ],
       'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',
-      'unicorn/no-array-for-each': 'error',
+      'unicorn/no-array-for-each': 'off',
       'unicorn/no-array-method-this-argument': 'error',
       'unicorn/no-array-push-push': 'error',
       'unicorn/no-await-expression-member': 'error',

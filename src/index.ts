@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-import eslintConfigPrettier from 'eslint-config-prettier';
 import { getIgnores } from './utils';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import type { ConfigObject, ConfigOptions } from './types';
 import {
   javascript,

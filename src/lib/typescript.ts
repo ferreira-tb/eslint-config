@@ -13,8 +13,8 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     interopDefault(import('@typescript-eslint/eslint-plugin'))
   ]);
 
-  const files = [Glob.TYPESCRIPT];
-  if (options.vue) files.push(Glob.VUE);
+  const files = [Glob.Typescript];
+  if (options.vue) files.push(Glob.Vue);
 
   const rules: Rules = {
     '@typescript-eslint/adjacent-overload-signatures': 'error',

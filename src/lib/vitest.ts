@@ -11,7 +11,7 @@ export async function vitest(options: ConfigOptions): Promise<Partial<ConfigObje
     plugins: {
       vitest: plugin
     },
-    files: [Glob.VITEST],
+    files: [Glob.Vitest],
     rules: {
       'vitest/consistent-test-it': ['error', { fn: 'it', withinDescribe: 'it' }],
       'vitest/expect-expect': [

@@ -1,17 +1,17 @@
 export const enum Glob {
-  ALL = '**/*.?([cm])[jt]s?(x)',
-  JAVASCRIPT = '**/*.?([cm])js?(x)',
-  TYPESCRIPT = '**/*.?([cm])ts?(x)',
-  VITEST = '**/*.{test,spec}.[jt]s',
-  VUE = '**/*.vue'
+  All = '**/*.?([cm])[jt]s?(x)',
+  Javascript = '**/*.?([cm])js?(x)',
+  Typescript = '**/*.?([cm])ts?(x)',
+  Vitest = '**/*.{test,spec}.[jt]s',
+  Vue = '**/*.vue'
 }
 
 export enum GlobIgnore {
-  CACHE = '**/cache',
-  DIST = '**/dist',
-  LOG = '**/log?(s)',
-  NODE_MODULES = '**/node_modules',
-  OUT = '**/out',
-  TARGET = '**/target',
-  TEMP = '**/?(.)temp'
+  Cache = '**/cache',
+  Dist = '**/dist',
+  Log = '**/log?(s)',
+  NodeModules = '**/node_modules',
+  Out = '**/out',
+  Target = '**/target',
+  Temp = '**/?(.)temp'
 }
