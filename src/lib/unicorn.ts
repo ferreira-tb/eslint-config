@@ -22,6 +22,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
           name: 'err'
         }
       ],
+      'unicorn/consistent-empty-array-spread': 'error',
       'unicorn/consistent-function-scoping': [
         'error',
         {
@@ -35,7 +36,9 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/no-array-push-push': 'error',
       'unicorn/no-await-expression-member': 'error',
       'unicorn/no-await-in-promise-methods': 'error',
+      'unicorn/no-invalid-fetch-options': 'error',
       'unicorn/no-invalid-remove-event-listener': 'error',
+      'unicorn/no-magic-array-flat-depth': 'error',
       'unicorn/no-single-promise-in-promise-methods': 'error',
       'unicorn/no-thenable': 'error',
       'unicorn/no-typeof-undefined': 'off',
@@ -56,7 +59,9 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/prefer-query-selector': 'error',
       'unicorn/prefer-reflect-apply': 'error',
       'unicorn/prefer-regexp-test': 'error',
+      'unicorn/prefer-string-raw': 'error',
       'unicorn/prefer-string-slice': 'error',
+      'unicorn/prefer-structured-clone': 'error',
       'unicorn/prefer-type-error': 'error',
       'unicorn/relative-url-style': ['error', 'never'],
 
