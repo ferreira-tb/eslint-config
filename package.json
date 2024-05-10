@@ -22,7 +22,7 @@
     "format": "prettier . --write",
     "format-check": "prettier . --check",
     "lint": "eslint . --config eslint.config.js --cache",
-    "lint:fix": "eslint . --config eslint.config.js --fix",
+    "lint-fix": "eslint . --config eslint.config.js --fix",
     "prepare": "husky",
     "release": "pnpm run build && pnpm publish",
     "type-check": "tsc --noEmit",
