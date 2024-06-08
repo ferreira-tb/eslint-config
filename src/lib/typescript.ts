@@ -210,7 +210,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-useless-constructor': 'error',
 
     '@typescript-eslint/no-useless-empty-export': 'error',
-    '@typescript-eslint/no-useless-template-literals': 'error',
+    '@typescript-eslint/no-useless-template-expression': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
 
     'no-throw-literal': 'off',
@@ -254,7 +254,6 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/prefer-regexp-exec': 'error',
     '@typescript-eslint/prefer-return-this-type': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
-    '@typescript-eslint/prefer-ts-expect-error': 'error',
     '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/require-array-sort-compare': 'error',
 

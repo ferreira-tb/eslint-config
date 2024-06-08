@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "3.6.1",
+  "version": "3.7.0",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -29,26 +29,26 @@
     "update": "miho update major -t"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.9.0",
-    "@typescript-eslint/parser": "^7.9.0",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.10.0",
     "eslint-plugin-unicorn": "^53.0.0",
     "eslint-plugin-vitest": "^0.5.4",
     "eslint-plugin-vue": "^9.26.0",
-    "globals": "^15.2.0",
-    "vue-eslint-parser": "^9.4.2"
+    "globals": "^15.4.0",
+    "vue-eslint-parser": "^9.4.3"
   },
   "devDependencies": {
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.14.2",
     "eslint": "^8.57.0",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
-    "tslib": "^2.6.2",
+    "lint-staged": "^15.2.5",
+    "prettier": "^3.3.1",
+    "tslib": "^2.6.3",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11",
+    "vite": "^5.2.13",
     "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
