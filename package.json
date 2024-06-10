@@ -1,11 +1,11 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "3.7.1",
+  "version": "3.7.2",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.3.0",
   "homepage": "https://github.com/ferreira-tb/eslint-config",
   "repository": {
     "type": "git",
@@ -29,8 +29,8 @@
     "update": "miho update major -t"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.10.0",
     "eslint-plugin-unicorn": "^53.0.0",
