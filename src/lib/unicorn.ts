@@ -39,6 +39,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/no-invalid-fetch-options': 'error',
       'unicorn/no-invalid-remove-event-listener': 'error',
       'unicorn/no-magic-array-flat-depth': 'error',
+      'unicorn/no-negation-in-equality-check': 'error',
       'unicorn/no-single-promise-in-promise-methods': 'error',
       'unicorn/no-thenable': 'error',
       'unicorn/no-typeof-undefined': 'off',
