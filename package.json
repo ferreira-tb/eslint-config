@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "3.8.4",
+  "version": "3.8.5",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -41,14 +41,14 @@
   },
   "devDependencies": {
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^20.14.8",
+    "@types/node": "^20.14.9",
     "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "tslib": "^2.6.3",
     "typescript": "^5.5.2",
-    "vite": "^5.3.1",
+    "vite": "^5.3.2",
     "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
