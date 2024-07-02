@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "3.8.7",
+  "version": "3.8.8",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -35,8 +35,8 @@
     "eslint-plugin-perfectionist": "^2.11.0",
     "eslint-plugin-unicorn": "^54.0.0",
     "eslint-plugin-vitest": "^0.5.4",
-    "eslint-plugin-vue": "^9.26.0",
-    "globals": "^15.7.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "globals": "^15.8.0",
     "vue-eslint-parser": "^9.4.3"
   },
   "devDependencies": {
@@ -47,7 +47,7 @@
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "tslib": "^2.6.3",
-    "typescript": "^5.5.2",
+    "typescript": "^5.5.3",
     "vite": "^5.3.2",
     "vite-plugin-dts": "^3.9.1"
   },
