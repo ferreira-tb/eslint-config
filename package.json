@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.5.0",
   "homepage": "https://github.com/ferreira-tb/eslint-config",
   "repository": {
     "type": "git",
@@ -29,8 +29,8 @@
     "update": "miho update major -t"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.15.0",
-    "@typescript-eslint/parser": "^7.15.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.11.0",
     "eslint-plugin-unicorn": "^54.0.0",
@@ -41,14 +41,14 @@
   },
   "devDependencies": {
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^20.14.9",
+    "@types/node": "^20.14.10",
     "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
-    "prettier": "^3.3.2",
+    "prettier": "^3.3.3",
     "tslib": "^2.6.3",
     "typescript": "^5.5.3",
-    "vite": "^5.3.2",
+    "vite": "^5.3.3",
     "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
