@@ -1,3 +1,47 @@
+export interface ConfigOptions {
+  /** @default true */
+  perfectionist?: boolean;
+  /** @default true */
+  prettier?: boolean;
+  /** @default true */
+  unicorn?: boolean;
+  /** @default false */
+  vitest?: boolean;
+  /** @default false */
+  vue?: boolean;
+
+  /** `tsconfig.json` files for Typescript. */
+  project: string[];
+
+  ignores?: Ignores['ignores'];
+  overrides?: {
+    javascript?: Rules;
+    perfectionist?: Rules;
+    typescript?: Rules;
+    unicorn?: Rules;
+    vitest?: Rules;
+    vue?: Rules;
+  };
+
+  /** @see https://typescript-eslint.io/rules/no-floating-promises#allowforknownsafepromises */
+  knownSafePromises?: KnownSafePromise[];
+}
+
+export interface Ignores {
+  ignores: string[];
+}
+
+export type Severity = 'error' | 'warn' | 'off' | 0 | 1;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type Rules = Record<string, Severity | any[]>;
+
+export interface KnownSafePromise {
+  from: string;
+  name: string;
+  package?: string;
+}
+
 /** @see https://eslint.org/docs/latest/use/configure/configuration-files-new#configuration-objects */
 export interface ConfigObject {
   files: string[];
@@ -13,37 +57,3 @@ export interface ConfigObject {
   processor?: unknown;
   rules: Rules;
 }
-
-export interface ConfigOptions {
-  /** @default true */
-  perfectionist?: boolean;
-  /** @default true */
-  prettier?: boolean;
-  /** @default true */
-  unicorn?: boolean;
-  /** @default false */
-  vitest?: boolean;
-  /** @default false */
-  vue?: boolean;
-
-  ignores?: Ignores['ignores'];
-  overrides?: {
-    javascript?: Rules;
-    perfectionist?: Rules;
-    typescript?: Rules;
-    unicorn?: Rules;
-    vitest?: Rules;
-    vue?: Rules;
-  };
-  /** `tsconfig.json` files for Typescript. */
-  project: string[];
-}
-
-export interface Ignores {
-  ignores: string[];
-}
-
-export type Severity = 'error' | 'warn' | 'off' | 0 | 1;
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type Rules = Record<string, Severity | any[]>;

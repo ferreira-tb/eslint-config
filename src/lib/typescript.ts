@@ -33,7 +33,6 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
         minimumDescriptionLength: 3
       }
     ],
-    '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
 
     'class-methods-use-this': 'off',
@@ -114,10 +113,17 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-empty-function': 'error',
 
     '@typescript-eslint/no-empty-interface': 'error',
+    '@typescript-eslint/no-empty-object-type': [
+      'error',
+      { allowInterfaces: 'never', allowObjectTypes: 'never' }
+    ],
     '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: true }],
     '@typescript-eslint/no-extra-non-null-assertion': 'error',
     '@typescript-eslint/no-extraneous-class': 'error',
-    '@typescript-eslint/no-floating-promises': ['error', { ignoreIIFE: true, ignoreVoid: true }],
+    '@typescript-eslint/no-floating-promises': [
+      'error',
+      { ignoreIIFE: true, ignoreVoid: true, allowForKnownSafePromises: options.knownSafePromises }
+    ],
     '@typescript-eslint/no-for-in-array': 'error',
 
     'no-implied-eval': 'off',
@@ -175,14 +181,17 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
       }
     ],
     '@typescript-eslint/no-unnecessary-condition': 'error',
+    '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/no-unnecessary-type-constraint': 'error',
+    '@typescript-eslint/no-unnecessary-type-parameters': 'error',
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-unsafe-call': 'error',
     '@typescript-eslint/no-unsafe-declaration-merging': 'error',
+    '@typescript-eslint/no-unsafe-function-type': 'error',
     '@typescript-eslint/no-unsafe-enum-comparison': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'error',
     '@typescript-eslint/no-unsafe-return': 'off',
@@ -211,6 +220,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
 
     '@typescript-eslint/no-useless-empty-export': 'error',
     '@typescript-eslint/no-useless-template-literals': 'error',
+    '@typescript-eslint/no-wrapper-object-types': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
 
     'no-throw-literal': 'off',
@@ -262,6 +272,10 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
 
     '@typescript-eslint/restrict-plus-operands': 'error',
     '@typescript-eslint/restrict-template-expressions': 'error',
+
+    'no-return-await': 'off',
+    '@typescript-eslint/return-await': ['error', 'in-try-catch'],
+
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': [
       'error',
