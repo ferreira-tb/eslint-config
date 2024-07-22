@@ -122,7 +122,11 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-extraneous-class': 'error',
     '@typescript-eslint/no-floating-promises': [
       'error',
-      { ignoreIIFE: true, ignoreVoid: true, allowForKnownSafePromises: options.knownSafePromises }
+      {
+        ignoreIIFE: true,
+        ignoreVoid: true,
+        allowForKnownSafePromises: options.knownSafePromises ?? []
+      }
     ],
     '@typescript-eslint/no-for-in-array': 'error',
 
