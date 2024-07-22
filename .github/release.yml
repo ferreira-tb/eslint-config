@@ -1,0 +1,33 @@
+changelog:
+  categories:
+    - title: Breaking Changes
+      labels:
+        - BREAKING CHANGE
+
+    - title: Features
+      labels:
+        - enhancement
+
+    - title: Bug Fixes
+      labels:
+        - bug
+
+    - title: Performance Improvements
+      labels:
+        - performance
+
+    - title: Deprecations
+      labels:
+        - deprecation
+
+    - title: Other Changes
+      labels:
+        - '*'
+      exclude:
+        labels:
+          - dependencies
+          - github actions
+
+    - title: Dependencies
+      labels:
+        - dependencies
