@@ -8,7 +8,6 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
   const { overrides, perfectionist: enabled = true } = options;
   if (!enabled) return {};
 
-  // @ts-expect-error: not typed
   const plugin = await interopDefault(import('eslint-plugin-perfectionist'));
 
   return {
@@ -16,6 +15,16 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
       perfectionist: plugin
     },
     rules: {
+      'perfectionist/sort-array-includes': [
+        'error',
+        {
+          type: 'natural',
+          order: 'asc',
+          ignoreCase: true,
+          groupKind: 'literals-first'
+        }
+      ],
+
       'perfectionist/sort-enums': [
         'error',
         {
@@ -27,7 +36,8 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
         'error',
         {
           type: 'line-length',
-          order: 'asc'
+          order: 'asc',
+          ignoreCase: true
         }
       ],
       'perfectionist/sort-imports': [
@@ -35,8 +45,8 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
         {
           type: 'line-length',
           order: 'asc',
-          'ignore-case': true,
-          'newlines-between': 'never',
+          ignoreCase: true,
+          newlinesBetween: 'never',
           groups: [['side-effect-style', 'side-effect'], 'unknown']
         }
       ],
@@ -45,7 +55,7 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
         {
           type: 'natural',
           order: 'asc',
-          'partition-by-new-line': true
+          partitionByNewLine: true
         }
       ],
       'perfectionist/sort-intersection-types': [
@@ -85,7 +95,16 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
         {
           type: 'natural',
           order: 'asc',
-          'partition-by-new-line': true
+          partitionByNewLine: true
+        }
+      ],
+
+      'perfectionist/sort-switch-case': [
+        'error',
+        {
+          type: 'natural',
+          order: 'asc',
+          ignoreCase: true
         }
       ],
 
