@@ -1,31 +1,26 @@
+import * as config from './lib';
 import { getIgnores } from './utils';
-import eslintConfigPrettier from 'eslint-config-prettier';
 import type { ConfigObject, ConfigOptions } from './types';
-import {
-  javascript,
-  perfectionist as perfect,
-  typescript,
-  unicorn as uni,
-  vitest,
-  vue
-} from './lib';
 
-async function config(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
-  const { prettier = true } = options;
-  const objs: Partial<ConfigObject>[] = await Promise.all([
-    javascript(options),
-    typescript(options),
-    ...(await vue(options)),
-    perfect(options),
-    uni(options),
-    vitest(options),
-    prettier ? eslintConfigPrettier : {},
-    {
-      ignores: [...getIgnores(), ...(options.ignores ?? [])]
-    }
+async function defineConfig(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
+  const ignores = {
+    ignores: [...getIgnores(), ...options.ignores ?? []],
+  };
+
+  const objects: Partial<ConfigObject>[] = await Promise.all([
+    config.javascript(options),
+    config.typescript(options),
+    ...await config.vue(options),
+
+    config.perfectionist(options),
+    config.unicorn(options),
+    config.stylistic(options),
+    config.vitest(options),
+
+    ignores,
   ]);
 
-  return objs;
+  return objects;
 }
 
-export default config;
+export default defineConfig;

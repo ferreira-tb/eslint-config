@@ -11,22 +11,22 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'cjs'],
-      fileName: 'index'
+      fileName: 'index',
     },
     rollupOptions: {
       external: [
         /^node:/,
         /@typescript-eslint/,
         'globals',
+        '@stylistic/eslint-plugin',
         '@typescript-eslint/parser',
         '@typescript-eslint/eslint-plugin',
-        'eslint-config-prettier',
         'eslint-plugin-perfectionist',
         'eslint-plugin-unicorn',
         'eslint-plugin-vitest',
         'eslint-plugin-vue',
-        'vue-eslint-parser'
-      ]
-    }
-  }
+        'vue-eslint-parser',
+      ],
+    },
+  },
 });

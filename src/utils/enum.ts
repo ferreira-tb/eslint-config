@@ -1,9 +1,9 @@
-export const enum Glob {
+export enum Glob {
   All = '**/*.?([cm])[jt]s?(x)',
   Javascript = '**/*.?([cm])js?(x)',
   Typescript = '**/*.?([cm])ts?(x)',
   Vitest = '**/*.{test,spec}.[jt]s',
-  Vue = '**/*.vue'
+  Vue = '**/*.vue',
 }
 
 export enum GlobIgnore {
@@ -13,5 +13,5 @@ export enum GlobIgnore {
   NodeModules = '**/node_modules',
   Out = '**/out',
   Target = '**/target',
-  Temp = '**/?(.)temp'
+  Temp = '**/?(.)temp',
 }
