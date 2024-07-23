@@ -4,6 +4,7 @@ import type { ConfigObject, ConfigOptions, Rules } from '../types';
 export const stylisticRules: Rules = {
   'stylistic/array-bracket-newline': ['error', 'consistent'],
   'stylistic/array-bracket-spacing': ['error', 'never'],
+  'stylistic/array-element-newline': ['error', 'consistent'],
   'stylistic/arrow-parens': ['error', 'always'],
   'stylistic/arrow-spacing': 'error',
   'stylistic/block-spacing': 'error',
@@ -110,6 +111,9 @@ export const stylisticRules: Rules = {
   'stylistic/yield-star-spacing': ['error', 'after'],
 };
 
+/**
+ * @see https://eslint.style/rules
+ */
 export async function stylistic(options: ConfigOptions): Promise<Partial<ConfigObject>> {
   const { overrides, stylistic: enabled } = options;
   if (!enabled) return {};

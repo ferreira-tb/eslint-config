@@ -4,6 +4,7 @@ export default config({
   project: ['./tsconfig.json'],
   ignores: ['index.d.ts'],
   stylistic: true,
+  jsonc: true,
   vue: true,
   overrides: {
     typescript: {

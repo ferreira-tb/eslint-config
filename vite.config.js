@@ -22,6 +22,7 @@ export default defineConfig({
         'globals',
         '@stylistic/eslint-plugin',
         'vue-eslint-parser',
+        'jsonc-eslint-parser',
       ],
     },
   },

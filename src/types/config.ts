@@ -1,8 +1,12 @@
 export interface ConfigOptions {
+  /** @default false */
+  jsonc?: boolean;
   /** @default true */
   perfectionist?: boolean;
   /** @default false */
   stylistic?: boolean;
+  /** @default false */
+  tailwind?: boolean;
   /** @default true */
   unicorn?: boolean;
   /** @default false */
@@ -16,8 +20,10 @@ export interface ConfigOptions {
   ignores?: Ignores['ignores'];
   overrides?: {
     javascript?: Rules;
+    jsonc?: Rules;
     perfectionist?: Rules;
     stylistic?: Rules;
+    tailwind?: Rules;
     typescript?: Rules;
     unicorn?: Rules;
     vitest?: Rules;

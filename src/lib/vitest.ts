@@ -1,6 +1,9 @@
 import { Glob, interopDefault } from '../utils';
 import type { ConfigObject, ConfigOptions } from '../types';
 
+/**
+ * @see https://github.com/veritem/eslint-plugin-vitest#rules
+ */
 export async function vitest(options: ConfigOptions): Promise<Partial<ConfigObject>> {
   const { overrides, vitest: enabled } = options;
   if (!enabled) return {};

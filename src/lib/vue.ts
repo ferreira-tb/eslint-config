@@ -179,7 +179,6 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
   };
 
   if (options.stylistic) {
-    // Formatting
     Object.assign(rules, {
       'vue/first-attribute-linebreak': ['error', {
         singleline: 'beside',
@@ -216,7 +215,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
         math: 'always',
       }],
       'vue/max-attributes-per-line': ['error', {
-        singleline: 1,
+        singleline: Number.MAX_SAFE_INTEGER,
         multiline: 1,
       }],
       'vue/multiline-html-element-content-newline': ['error', {
@@ -239,6 +238,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     const vueStylistic = [
       'vue/array-bracket-newline',
       'vue/array-bracket-spacing',
+      'vue/array-element-newline',
       'vue/key-spacing',
       'vue/keyword-spacing',
       'vue/max-len',
@@ -265,9 +265,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
   }
 
   return [
-    {
-      plugins: { vue: vuePlugin },
-    },
+    { plugins: { vue: vuePlugin } },
     {
       files: [Glob.Vue],
       languageOptions: {
