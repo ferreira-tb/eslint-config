@@ -8,18 +8,11 @@ export async function vitest(options: ConfigOptions): Promise<Partial<ConfigObje
   const plugin = await interopDefault(import('eslint-plugin-vitest'));
 
   return {
-    plugins: {
-      vitest: plugin
-    },
+    plugins: { vitest: plugin },
     files: [Glob.Vitest],
     rules: {
       'vitest/consistent-test-it': ['error', { fn: 'it', withinDescribe: 'it' }],
-      'vitest/expect-expect': [
-        'error',
-        {
-          assertFunctionNames: ['expect']
-        }
-      ],
+      'vitest/expect-expect': ['error', { assertFunctionNames: ['expect'] }],
       'vitest/max-expects': ['error', { max: 5 }],
       'vitest/max-nested-describe': ['error', { max: 1 }],
       'vitest/no-alias-methods': 'error',
@@ -46,16 +39,11 @@ export async function vitest(options: ConfigOptions): Promise<Partial<ConfigObje
       'vitest/prefer-to-contain': 'error',
       'vitest/prefer-to-have-length': 'error',
       'vitest/prefer-todo': 'error',
-      'vitest/require-top-level-describe': [
-        'error',
-        {
-          maxNumberOfTopLevelDescribes: 10
-        }
-      ],
+      'vitest/require-top-level-describe': ['error', { maxNumberOfTopLevelDescribes: 10 }],
       'vitest/valid-describe-callback': 'error',
       'vitest/valid-expect': 'error',
 
-      ...overrides?.vitest
-    }
+      ...overrides?.vitest,
+    },
   };
 }

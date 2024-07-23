@@ -12,23 +12,11 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
   const plugin = await interopDefault(import('eslint-plugin-unicorn'));
 
   return {
-    plugins: {
-      unicorn: plugin
-    },
+    plugins: { unicorn: plugin },
     rules: {
-      'unicorn/catch-error-name': [
-        'error',
-        {
-          name: 'err'
-        }
-      ],
+      'unicorn/catch-error-name': ['error', { name: 'err' }],
       'unicorn/consistent-empty-array-spread': 'error',
-      'unicorn/consistent-function-scoping': [
-        'error',
-        {
-          checkArrowFunctions: true
-        }
-      ],
+      'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: true }],
       'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',
       'unicorn/no-array-for-each': 'off',
@@ -66,7 +54,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/prefer-type-error': 'error',
       'unicorn/relative-url-style': ['error', 'never'],
 
-      ...overrides?.unicorn
-    }
+      ...overrides?.unicorn,
+    },
   };
 }

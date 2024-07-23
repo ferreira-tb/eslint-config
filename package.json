@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "4.1.1",
+  "version": "4.2.0",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -15,12 +15,10 @@
     "url": "https://github.com/ferreira-tb/eslint-config/issues"
   },
   "lint-staged": {
-    "*.{?(c|m)@(j|t)s,css,vue,md,json}": "prettier --write"
+    "*.{?(c|m)@(j|t)s,css,vue,md,json}": "eslint --config eslint.config.js --fix"
   },
   "scripts": {
     "build": "vite build",
-    "format": "prettier . --write",
-    "format-check": "prettier . --check",
     "lint": "eslint . --config eslint.config.js --cache",
     "lint-fix": "eslint . --config eslint.config.js --fix",
     "prepare": "husky",
@@ -29,9 +27,9 @@
     "update": "miho update major -t"
   },
   "dependencies": {
+    "@stylistic/eslint-plugin": "^2.3.0",
     "@typescript-eslint/eslint-plugin": "^7.17.0",
     "@typescript-eslint/parser": "^7.17.0",
-    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^3.0.0",
     "eslint-plugin-unicorn": "^54.0.0",
     "eslint-plugin-vitest": "^0.5.4",
@@ -40,14 +38,13 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "devDependencies": {
-    "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^20.14.11",
     "eslint": "^8.57.0",
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
     "tslib": "^2.6.3",
-    "typescript": "^5.5.3",
+    "typescript": "^5.5.4",
     "vite": "^5.3.4",
     "vite-plugin-dts": "^3.9.1"
   },

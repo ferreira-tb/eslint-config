@@ -1,8 +1,8 @@
 export interface ConfigOptions {
   /** @default true */
   perfectionist?: boolean;
-  /** @default true */
-  prettier?: boolean;
+  /** @default false */
+  stylistic?: boolean;
   /** @default true */
   unicorn?: boolean;
   /** @default false */
@@ -10,13 +10,14 @@ export interface ConfigOptions {
   /** @default false */
   vue?: boolean;
 
-  /** `tsconfig.json` files for Typescript. */
+  /** `tsconfig.json` files for TypeScript. */
   project: string[];
 
   ignores?: Ignores['ignores'];
   overrides?: {
     javascript?: Rules;
     perfectionist?: Rules;
+    stylistic?: Rules;
     typescript?: Rules;
     unicorn?: Rules;
     vitest?: Rules;
@@ -33,7 +34,6 @@ export interface Ignores {
 
 export type Severity = 'error' | 'warn' | 'off' | 0 | 1;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Rules = Record<string, Severity | any[]>;
 
 export interface KnownSafePromise {
