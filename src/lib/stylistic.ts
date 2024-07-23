@@ -24,7 +24,11 @@ export const stylisticRules: Rules = {
   'stylistic/function-call-argument-newline': ['error', 'consistent'],
   'stylistic/function-call-spacing': ['error', 'never'],
   'stylistic/function-paren-newline': ['error', 'never'],
-  'stylistic/generator-star-spacing': ['error', { before: false, after: true }],
+  'stylistic/generator-star-spacing': ['error', {
+    before: false,
+    after: true,
+    method: { before: true, after: false },
+  }],
   'stylistic/implicit-arrow-linebreak': ['error', 'beside'],
   'stylistic/indent': ['error', 2, { flatTernaryExpressions: true }],
   'stylistic/indent-binary-ops': ['error', 2],

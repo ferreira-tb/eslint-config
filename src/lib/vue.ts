@@ -1,10 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import process from 'node:process';
 import { Glob } from '../utils/enum';
-import { interopDefault } from '../utils';
 import { stylisticRules } from './stylistic';
+import { interopDefault, json } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
 
 /**
@@ -20,6 +17,8 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     interopDefault(import('vue-eslint-parser')),
     interopDefault(import('@typescript-eslint/parser')),
   ]);
+
+  const INLINE_ELEMENTS = await json<string[]>('eslint-plugin-vue/lib/utils/inline-non-void-elements.json');
 
   const rules: Rules = {
     ...(vuePlugin as any).configs.base.rules,
@@ -52,33 +51,10 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     }],
     'vue/define-props-declaration': ['error', 'type-based'],
     'vue/enforce-style-attribute': ['error', { allow: ['scoped'] }],
-    'vue/first-attribute-linebreak': 'off',
     'vue/html-button-has-type': ['error', {
       button: true,
       submit: true,
       reset: true,
-    }],
-    'vue/html-closing-bracket-newline': ['error', {
-      singleline: 'never',
-      multiline: 'always',
-      selfClosingTag: {
-        singleline: 'never',
-        multiline: 'always',
-      },
-    }],
-    'vue/html-closing-bracket-spacing': ['error', {
-      startTag: 'never',
-      endTag: 'never',
-      selfClosingTag: 'always',
-    }],
-    'vue/html-self-closing': ['error', {
-      html: {
-        void: 'never',
-        normal: 'always',
-        component: 'always',
-      },
-      svg: 'always',
-      math: 'always',
     }],
     'vue/match-component-file-name': ['off', {
       extensions: ['tsx', 'vue'],
@@ -86,7 +62,6 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     }],
     'vue/match-component-import-name': 'error',
     'vue/multi-word-component-names': 'off',
-    'vue/mustache-interpolation-spacing': ['error', 'always'],
     'vue/no-arrow-functions-in-watch': 'off',
     'vue/no-async-in-computed-properties': 'error',
     'vue/no-boolean-default': ['error', 'no-default'],
@@ -101,7 +76,6 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/no-expose-after-await': 'error',
     'vue/no-lifecycle-after-await': 'error',
     'vue/no-lone-template': 'error',
-    'vue/no-multi-spaces': 'error',
     'vue/no-multiple-objects-in-class': 'error',
     'vue/no-mutating-props': 'error',
     'vue/no-parsing-error': 'error',
@@ -115,7 +89,6 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/no-setup-props-reactivity-loss': 'error',
     'vue/no-shared-component-data': 'error',
     'vue/no-side-effects-in-computed-properties': 'error',
-    'vue/no-spaces-around-equal-signs-in-attribute': 'error',
     'vue/no-static-inline-styles': ['error', { allowBinding: false }],
     'vue/no-template-key': 'error',
     'vue/no-template-shadow': 'error',
@@ -206,6 +179,63 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
   };
 
   if (options.stylistic) {
+    // Formatting
+    Object.assign(rules, {
+      'vue/first-attribute-linebreak': ['error', {
+        singleline: 'beside',
+        multiline: 'below',
+      }],
+      'vue/html-closing-bracket-newline': ['error', {
+        singleline: 'never',
+        multiline: 'always',
+        selfClosingTag: {
+          singleline: 'never',
+          multiline: 'always',
+        },
+      }],
+      'vue/html-closing-bracket-spacing': ['error', {
+        startTag: 'never',
+        endTag: 'never',
+        selfClosingTag: 'always',
+      }],
+      'vue/html-indent': ['error', 2, {
+        attribute: 1,
+        baseIndent: 1,
+        closeBracket: 0,
+        alignAttributesVertically: true,
+        ignores: [],
+      }],
+      'vue/html-quotes': ['error', 'double', { avoidEscape: false }],
+      'vue/html-self-closing': ['error', {
+        html: {
+          void: 'never',
+          normal: 'always',
+          component: 'always',
+        },
+        svg: 'always',
+        math: 'always',
+      }],
+      'vue/max-attributes-per-line': ['error', {
+        singleline: 1,
+        multiline: 1,
+      }],
+      'vue/multiline-html-element-content-newline': ['error', {
+        ignoreWhenEmpty: true,
+        ignores: ['pre', 'textarea', ...INLINE_ELEMENTS],
+        allowEmptyLines: false,
+      }],
+      'vue/mustache-interpolation-spacing': ['error', 'always'],
+      'vue/no-multi-spaces': ['error', { ignoreProperties: false }],
+      'vue/no-spaces-around-equal-signs-in-attribute': 'error',
+      'vue/singleline-html-element-content-newline': ['off', {
+        ignoreWhenNoAttributes: true,
+        ignoreWhenEmpty: true,
+        ignores: ['pre', 'textarea', ...INLINE_ELEMENTS],
+        externalIgnores: [],
+      }],
+    });
+
+    // https://eslint.vuejs.org/rules/#extension-rules
     const vueStylistic = [
       'vue/array-bracket-newline',
       'vue/array-bracket-spacing',

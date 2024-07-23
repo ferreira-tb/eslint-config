@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [dts({ rollupTypes: true })],
   build: {
     outDir: 'dist',
+    target: 'esnext',
     emptyOutDir: true,
     minify: false,
     lib: {
@@ -16,15 +17,10 @@ export default defineConfig({
     rollupOptions: {
       external: [
         /^node:/,
-        /@typescript-eslint/,
+        /^@typescript-eslint/,
+        /^eslint-plugin/,
         'globals',
         '@stylistic/eslint-plugin',
-        '@typescript-eslint/parser',
-        '@typescript-eslint/eslint-plugin',
-        'eslint-plugin-perfectionist',
-        'eslint-plugin-unicorn',
-        'eslint-plugin-vitest',
-        'eslint-plugin-vue',
         'vue-eslint-parser',
       ],
     },
