@@ -94,7 +94,13 @@ export const stylisticRules: Rules = {
   'stylistic/switch-colon-spacing': ['error', { after: true, before: false }],
   'stylistic/template-curly-spacing': ['error', 'never'],
   'stylistic/template-tag-spacing': ['error', 'never'],
-  'stylistic/type-annotation-spacing': ['error', { after: true, before: false }],
+  'stylistic/type-annotation-spacing': ['error', {
+    before: false,
+    after: true,
+    overrides: {
+      arrow: { before: true, after: true },
+    },
+  }],
   'stylistic/type-generic-spacing': 'error',
   'stylistic/type-named-tuple-spacing': 'error',
   'stylistic/yield-star-spacing': ['error', 'after'],
