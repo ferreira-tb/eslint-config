@@ -31,6 +31,6 @@
     "forceConsistentCasingInFileNames": true,
     "noEmitOnError": true,
 
-    "types": ["node" ]
+    "types": ["node"]
   }
 }

@@ -5,7 +5,6 @@ export default config({
   ignores: ['index.d.ts'],
   stylistic: true,
   jsonc: true,
-  vue: true,
   overrides: {
     typescript: {
       '@typescript-eslint/no-explicit-any': 'off',

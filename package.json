@@ -39,6 +39,7 @@
     "@typescript-eslint/parser": "^7.17.0",
     "eslint-plugin-jsonc": "^2.16.0",
     "eslint-plugin-perfectionist": "^3.0.0",
+    "eslint-plugin-tailwindcss": "^3.17.4",
     "eslint-plugin-unicorn": "^54.0.0",
     "eslint-plugin-vitest": "^0.5.4",
     "eslint-plugin-vue": "^9.27.0",

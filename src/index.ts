@@ -14,10 +14,11 @@ async function defineConfig(options: ConfigOptions): Promise<Partial<ConfigObjec
     ...await config.vue(options),
     ...await config.jsonc(options),
 
+    config.stylistic(options),
     config.perfectionist(options),
     config.unicorn(options),
-    config.stylistic(options),
     config.vitest(options),
+    config.tailwind(options),
 
     ignores,
   ]);
