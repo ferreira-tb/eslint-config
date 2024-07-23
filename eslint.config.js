@@ -1,10 +1,12 @@
-import config from './dist/index.js';
+import { defineConfig } from './dist/index.js';
 
-export default config({
+export default defineConfig({
   project: ['./tsconfig.json'],
   ignores: ['index.d.ts'],
-  stylistic: true,
-  jsonc: true,
+  features: {
+    stylistic: true,
+    jsonc: true,
+  },
   overrides: {
     typescript: {
       '@typescript-eslint/no-explicit-any': 'off',
