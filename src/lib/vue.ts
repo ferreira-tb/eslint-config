@@ -8,8 +8,7 @@ import type { ConfigObject, ConfigOptions, Rules } from '../types';
  * @see https://eslint.vuejs.org/rules/
  */
 export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
-  const { overrides, vue: enabled } = options;
-  if (!enabled) return [];
+  if (!options.features?.vue) return [];
 
   const [vuePlugin, vueParser, tsParser] = await Promise.all([
     // @ts-expect-error no types
@@ -175,10 +174,10 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/valid-v-slot': 'error',
     'vue/valid-v-text': 'error',
 
-    ...overrides?.vue,
+    ...options.overrides?.vue,
   };
 
-  if (options.stylistic) {
+  if (options.features.stylistic) {
     Object.assign(rules, {
       'vue/first-attribute-linebreak': ['error', {
         singleline: 'beside',

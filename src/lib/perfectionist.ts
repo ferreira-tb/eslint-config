@@ -5,7 +5,7 @@ import type { ConfigObject, ConfigOptions } from '../types';
  * @see https://eslint-plugin-perfectionist.azat.io/rules/
  */
 export async function perfectionist(options: ConfigOptions): Promise<Partial<ConfigObject>> {
-  const { overrides, perfectionist: enabled = true } = options;
+  const { perfectionist: enabled = true } = options.features ?? {};
   if (!enabled) return {};
 
   const plugin = await interopDefault(import('eslint-plugin-perfectionist'));
@@ -73,7 +73,7 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
         ignoreCase: true,
       }],
 
-      ...overrides?.perfectionist,
+      ...options.overrides?.perfectionist,
     },
   };
 }

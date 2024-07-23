@@ -6,10 +6,8 @@ import type { ConfigObject, ConfigOptions } from '../types';
  * @see https://eslint.org/docs/latest/rules/
  */
 export function javascript(options: ConfigOptions): ConfigObject {
-  const { overrides } = options;
-
   const files = [Glob.All];
-  if (options.vue) files.push(Glob.Vue);
+  if (options.features?.vue) files.push(Glob.Vue);
 
   return {
     files,
@@ -147,7 +145,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'valid-typeof': 'error',
       yoda: ['error', 'never'],
 
-      ...overrides?.javascript,
+      ...options.overrides?.javascript,
     },
   };
 }

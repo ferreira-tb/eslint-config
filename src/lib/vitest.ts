@@ -5,8 +5,7 @@ import type { ConfigObject, ConfigOptions } from '../types';
  * @see https://github.com/veritem/eslint-plugin-vitest#rules
  */
 export async function vitest(options: ConfigOptions): Promise<Partial<ConfigObject>> {
-  const { overrides, vitest: enabled } = options;
-  if (!enabled) return {};
+  if (!options.features?.vitest) return {};
 
   const plugin = await interopDefault(import('eslint-plugin-vitest'));
 
@@ -46,7 +45,7 @@ export async function vitest(options: ConfigOptions): Promise<Partial<ConfigObje
       'vitest/valid-describe-callback': 'error',
       'vitest/valid-expect': 'error',
 
-      ...overrides?.vitest,
+      ...options.overrides?.vitest,
     },
   };
 }

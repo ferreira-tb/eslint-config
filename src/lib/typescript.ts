@@ -7,14 +7,13 @@ import type { ConfigObject, ConfigOptions, Rules } from '../types';
  * @see https://typescript-eslint.io/rules/
  */
 export async function typescript(options: ConfigOptions): Promise<ConfigObject> {
-  const { project, overrides } = options;
   const [tsParser, tsPlugin] = await Promise.all([
     interopDefault(import('@typescript-eslint/parser')),
     interopDefault(import('@typescript-eslint/eslint-plugin')),
   ]);
 
   const files = [Glob.Typescript];
-  if (options.vue) files.push(Glob.Vue);
+  if (options.features?.vue) files.push(Glob.Vue);
 
   const rules: Rules = {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -248,7 +247,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/unified-signatures': ['error', { ignoreDifferentlyNamedParameters: true }],
     '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
 
-    ...overrides?.typescript,
+    ...options.overrides?.typescript,
   };
 
   return {
@@ -258,9 +257,9 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
       sourceType: 'module',
       parser: tsParser,
       parserOptions: {
-        project,
+        project: options.project,
         tsconfigRootDir: process.cwd(),
-        extraFileExtensions: options.vue ? ['.vue'] : [],
+        extraFileExtensions: options.features?.vue ? ['.vue'] : [],
       },
     },
     plugins: { '@typescript-eslint': tsPlugin },

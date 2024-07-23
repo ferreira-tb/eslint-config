@@ -6,8 +6,7 @@ import type { ConfigObject, ConfigOptions, Rules } from '../types';
  * @see https://ota-meshi.github.io/eslint-plugin-jsonc/rules/
  */
 export async function jsonc(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
-  const { overrides, jsonc: enabled } = options;
-  if (!enabled) return [];
+  if (!options.features?.jsonc) return [];
 
   const [jsoncPlugin, jsoncParser] = await Promise.all([
     interopDefault(import('eslint-plugin-jsonc')),
@@ -24,10 +23,10 @@ export async function jsonc(options: ConfigOptions): Promise<Partial<ConfigObjec
     'jsonc/no-undefined-value': 'error',
     'jsonc/valid-json-number': 'error',
 
-    ...overrides?.jsonc,
+    ...options.overrides?.jsonc,
   };
 
-  if (options.stylistic) {
+  if (options.features.stylistic) {
     Object.assign(rules, {
       'jsonc/comma-dangle': ['error', 'never'],
       'jsonc/quotes': ['error', 'double', { avoidEscape: false }],

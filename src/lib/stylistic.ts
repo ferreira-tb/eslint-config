@@ -115,17 +115,16 @@ export const stylisticRules: Rules = {
  * @see https://eslint.style/rules
  */
 export async function stylistic(options: ConfigOptions): Promise<Partial<ConfigObject>> {
-  const { overrides, stylistic: enabled } = options;
-  if (!enabled) return {};
+  if (!options.features?.stylistic) return {};
 
   const plugin = await interopDefault(import('@stylistic/eslint-plugin'));
 
   const files = [Glob.All];
-  if (options.vue) files.push(Glob.Vue);
+  if (options.features.vue) files.push(Glob.Vue);
 
   const rules: Rules = {
     ...stylisticRules,
-    ...overrides?.stylistic,
+    ...options.overrides?.stylistic,
   };
 
   return {

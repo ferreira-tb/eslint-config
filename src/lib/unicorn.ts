@@ -5,7 +5,7 @@ import type { ConfigObject, ConfigOptions } from '../types';
  * @see https://github.com/sindresorhus/eslint-plugin-unicorn#rules
  */
 export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObject>> {
-  const { overrides, unicorn: enabled = true } = options;
+  const { unicorn: enabled = true } = options.features ?? {};
   if (!enabled) return {};
 
   // @ts-expect-error: not typed
@@ -54,7 +54,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/prefer-type-error': 'error',
       'unicorn/relative-url-style': ['error', 'never'],
 
-      ...overrides?.unicorn,
+      ...options.overrides?.unicorn,
     },
   };
 }

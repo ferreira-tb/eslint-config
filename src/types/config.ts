@@ -1,18 +1,20 @@
 export interface ConfigOptions {
-  /** @default false */
-  jsonc?: boolean;
-  /** @default true */
-  perfectionist?: boolean;
-  /** @default false */
-  stylistic?: boolean;
-  /** @default false */
-  tailwind?: boolean;
-  /** @default true */
-  unicorn?: boolean;
-  /** @default false */
-  vitest?: boolean;
-  /** @default false */
-  vue?: boolean;
+  features?: {
+    /** @default false */
+    jsonc?: boolean;
+    /** @default true */
+    perfectionist?: boolean;
+    /** @default false */
+    stylistic?: boolean;
+    /** @default false */
+    tailwind?: boolean;
+    /** @default true */
+    unicorn?: boolean;
+    /** @default false */
+    vitest?: boolean;
+    /** @default false */
+    vue?: boolean;
+  };
 
   /** `tsconfig.json` files for TypeScript. */
   project: string[];
