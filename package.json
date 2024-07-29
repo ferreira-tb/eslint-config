@@ -47,7 +47,7 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "devDependencies": {
-    "@types/node": "^20.14.11",
+    "@types/node": "^22.0.0",
     "eslint": "^8.57.0",
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
