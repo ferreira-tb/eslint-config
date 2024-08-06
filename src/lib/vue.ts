@@ -207,7 +207,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
       'vue/html-self-closing': ['error', {
         html: {
           void: 'never',
-          normal: 'always',
+          normal: 'never',
           component: 'always',
         },
         svg: 'always',
