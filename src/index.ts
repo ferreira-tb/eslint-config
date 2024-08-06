@@ -4,17 +4,13 @@ import type { ConfigObject, ConfigOptions } from './types';
 
 export async function defineConfig(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
   const ignores = {
-    ignores: [...getIgnores(), ...options.ignores ?? []],
+    ignores: [...getIgnores(), ...(options.ignores ?? [])],
   };
 
   const objects: Partial<ConfigObject>[] = await Promise.all([
     config.javascript(options),
     config.typescript(options),
-
-    ...await config.vue(options),
-    ...await config.jsonc(options),
-
-    config.stylistic(options),
+    ...(await config.vue(options)),
     config.perfectionist(options),
     config.unicorn(options),
     config.tailwind(options),

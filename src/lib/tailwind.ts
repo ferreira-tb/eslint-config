@@ -13,7 +13,6 @@ export async function tailwind(options: ConfigOptions): Promise<Partial<ConfigOb
   const callees = ['classnames', 'clsx', 'cn', 'ctl', 'cva', 'tv'];
 
   const rules: Rules = {
-    'tailwindcss/classnames-order': ['error', { callees }],
     'tailwindcss/enforces-shorthand': ['error', { callees }],
     'tailwindcss/no-contradicting-classname': ['error', { callees }],
 

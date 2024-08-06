@@ -1,7 +1,6 @@
 import process from 'node:process';
 import { Glob } from '../utils/enum';
-import { stylisticRules } from './stylistic';
-import { interopDefault, json } from '../utils';
+import { interopDefault } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
 
 /**
@@ -17,48 +16,68 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     interopDefault(import('@typescript-eslint/parser')),
   ]);
 
-  const INLINE_ELEMENTS = await json<string[]>('eslint-plugin-vue/lib/utils/inline-non-void-elements.json');
-
   const rules: Rules = {
     ...(vuePlugin as any).configs.base.rules,
 
     'vue/attribute-hyphenation': ['error', 'always'],
     'vue/attributes-order': 'error',
-    'vue/block-lang': ['error', {
-      script: { lang: 'ts' },
-      style: {
-        lang: 'scss',
-        allowNoLang: true,
+    'vue/block-lang': [
+      'error',
+      {
+        script: { lang: 'ts' },
+        style: {
+          lang: 'scss',
+          allowNoLang: true,
+        },
       },
-    }],
-    'vue/block-order': ['error', { order: [['script', 'template'], 'style:not([scoped])', 'style[scoped]'] }],
-    'vue/block-tag-newline': ['error', {
-      singleline: 'always',
-      multiline: 'always',
-      maxEmptyLines: 0,
-    }],
+    ],
+    'vue/block-order': [
+      'error',
+      { order: [['script', 'template'], 'style:not([scoped])', 'style[scoped]'] },
+    ],
+    'vue/block-tag-newline': [
+      'error',
+      {
+        singleline: 'always',
+        multiline: 'always',
+        maxEmptyLines: 0,
+      },
+    ],
     'vue/component-api-style': ['error', ['script-setup']],
     'vue/component-definition-name-casing': ['error', 'PascalCase'],
-    'vue/component-name-in-template-casing': ['error', 'PascalCase', {
-      registeredComponentsOnly: false,
-    }],
+    'vue/component-name-in-template-casing': [
+      'error',
+      'PascalCase',
+      {
+        registeredComponentsOnly: false,
+      },
+    ],
     'vue/custom-event-name-casing': ['error', 'kebab-case'],
     'vue/define-emits-declaration': ['error', 'type-based'],
-    'vue/define-macros-order': ['error', {
-      order: ['defineOptions', 'defineProps', 'defineModel', 'defineEmits', 'defineSlots'],
-      defineExposeLast: true,
-    }],
+    'vue/define-macros-order': [
+      'error',
+      {
+        order: ['defineOptions', 'defineProps', 'defineModel', 'defineEmits', 'defineSlots'],
+        defineExposeLast: true,
+      },
+    ],
     'vue/define-props-declaration': ['error', 'type-based'],
     'vue/enforce-style-attribute': ['error', { allow: ['scoped'] }],
-    'vue/html-button-has-type': ['error', {
-      button: true,
-      submit: true,
-      reset: true,
-    }],
-    'vue/match-component-file-name': ['off', {
-      extensions: ['tsx', 'vue'],
-      shouldMatchCase: false,
-    }],
+    'vue/html-button-has-type': [
+      'error',
+      {
+        button: true,
+        submit: true,
+        reset: true,
+      },
+    ],
+    'vue/match-component-file-name': [
+      'off',
+      {
+        extensions: ['tsx', 'vue'],
+        shouldMatchCase: false,
+      },
+    ],
     'vue/match-component-import-name': 'error',
     'vue/multi-word-component-names': 'off',
     'vue/no-arrow-functions-in-watch': 'off',
@@ -67,10 +86,13 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/no-computed-properties-in-data': 'error',
     'vue/no-dupe-keys': 'error',
     'vue/no-dupe-v-else-if': 'error',
-    'vue/no-duplicate-attributes': ['error', {
-      allowCoexistClass: true,
-      allowCoexistStyle: true,
-    }],
+    'vue/no-duplicate-attributes': [
+      'error',
+      {
+        allowCoexistClass: true,
+        allowCoexistStyle: true,
+      },
+    ],
     'vue/no-export-in-script-setup': 'error',
     'vue/no-expose-after-await': 'error',
     'vue/no-lifecycle-after-await': 'error',
@@ -101,10 +123,13 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/no-use-computed-property-like-method': 'error',
     'vue/no-use-v-else-with-v-for': 'error',
     'vue/no-use-v-if-with-v-for': 'error',
-    'vue/no-useless-mustaches': ['error', {
-      ignoreIncludesComment: false,
-      ignoreStringEscape: false,
-    }],
+    'vue/no-useless-mustaches': [
+      'error',
+      {
+        ignoreIncludesComment: false,
+        ignoreStringEscape: false,
+      },
+    ],
     'vue/no-useless-template-attributes': 'error',
     'vue/no-useless-v-bind': 'error',
     'vue/no-v-for-template-key-on-child': 'error',
@@ -122,13 +147,16 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/require-default-prop': 'off',
     'vue/require-explicit-emits': ['error', { allowProps: false }],
     'vue/require-explicit-slots': 'error',
-    'vue/require-macro-variable-name': ['error', {
-      defineProps: 'props',
-      defineEmits: 'emit',
-      defineSlots: 'slots',
-      useSlots: 'slots',
-      useAttrs: 'attrs',
-    }],
+    'vue/require-macro-variable-name': [
+      'error',
+      {
+        defineProps: 'props',
+        defineEmits: 'emit',
+        defineSlots: 'slots',
+        useSlots: 'slots',
+        useAttrs: 'attrs',
+      },
+    ],
     'vue/require-prop-types': 'error',
     'vue/require-render-return': 'error',
     'vue/require-slots-as-functions': 'error',
@@ -140,17 +168,24 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/return-in-emits-validator': 'error',
     'vue/this-in-template': ['error', 'never'],
     'vue/use-v-on-exact': 'error',
-    'vue/v-bind-style': ['error', 'shorthand', {
-      sameNameShorthand: 'always',
-    }],
+    'vue/v-bind-style': [
+      'error',
+      'shorthand',
+      {
+        sameNameShorthand: 'always',
+      },
+    ],
     'vue/v-for-delimiter-style': ['error', 'of'],
     'vue/v-on-handler-style': 'off',
     'vue/v-on-style': ['error', 'shorthand'],
-    'vue/v-slot-style': ['error', {
-      atComponent: 'shorthand',
-      default: 'shorthand',
-      named: 'shorthand',
-    }],
+    'vue/v-slot-style': [
+      'error',
+      {
+        atComponent: 'shorthand',
+        default: 'shorthand',
+        named: 'shorthand',
+      },
+    ],
     'vue/v-on-event-hyphenation': ['error', 'always'],
     'vue/valid-attribute-name': 'error',
     'vue/valid-define-emits': 'error',
@@ -177,92 +212,6 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     ...options.overrides?.vue,
   };
 
-  if (options.features.stylistic) {
-    Object.assign(rules, {
-      'vue/first-attribute-linebreak': ['error', {
-        singleline: 'beside',
-        multiline: 'below',
-      }],
-      'vue/html-closing-bracket-newline': ['error', {
-        singleline: 'never',
-        multiline: 'always',
-        selfClosingTag: {
-          singleline: 'never',
-          multiline: 'always',
-        },
-      }],
-      'vue/html-closing-bracket-spacing': ['error', {
-        startTag: 'never',
-        endTag: 'never',
-        selfClosingTag: 'always',
-      }],
-      'vue/html-indent': ['error', 2, {
-        attribute: 1,
-        baseIndent: 1,
-        closeBracket: 0,
-        alignAttributesVertically: true,
-        ignores: [],
-      }],
-      'vue/html-quotes': ['error', 'double', { avoidEscape: false }],
-      'vue/html-self-closing': ['error', {
-        html: {
-          void: 'never',
-          normal: 'any',
-          component: 'always',
-        },
-        svg: 'always',
-        math: 'always',
-      }],
-      'vue/max-attributes-per-line': ['error', {
-        singleline: Number.MAX_SAFE_INTEGER,
-        multiline: 1,
-      }],
-      'vue/multiline-html-element-content-newline': ['error', {
-        ignoreWhenEmpty: true,
-        ignores: ['pre', 'textarea', ...INLINE_ELEMENTS],
-        allowEmptyLines: false,
-      }],
-      'vue/mustache-interpolation-spacing': ['error', 'always'],
-      'vue/no-multi-spaces': ['error', { ignoreProperties: false }],
-      'vue/no-spaces-around-equal-signs-in-attribute': 'error',
-      'vue/singleline-html-element-content-newline': ['off', {
-        ignoreWhenNoAttributes: true,
-        ignoreWhenEmpty: true,
-        ignores: ['pre', 'textarea', ...INLINE_ELEMENTS],
-        externalIgnores: [],
-      }],
-    });
-
-    // https://eslint.vuejs.org/rules/#extension-rules
-    const vueStylistic = [
-      'vue/array-bracket-newline',
-      'vue/array-bracket-spacing',
-      'vue/array-element-newline',
-      'vue/key-spacing',
-      'vue/keyword-spacing',
-      'vue/max-len',
-      'vue/no-extra-parens',
-      'vue/object-curly-newline',
-      'vue/object-curly-spacing',
-      'vue/object-property-newline',
-      'vue/operator-linebreak',
-      'vue/quote-props',
-      'vue/space-in-parens',
-      'vue/space-infix-ops',
-      'vue/space-unary-ops',
-      'vue/template-curly-spacing',
-    ];
-
-    Object.assign(rules, vueStylistic.reduce<Rules>((acc, rule) => {
-      const name = rule.replace('vue/', 'stylistic/');
-      if (Object.hasOwn(stylisticRules, name)) {
-        acc[rule] = stylisticRules[name];
-      }
-
-      return acc;
-    }, {}));
-  }
-
   return [
     { plugins: { vue: vuePlugin } },
     {
@@ -280,7 +229,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
       },
     },
     {
-    // @ts-expect-error no types
+      // @ts-expect-error no types
       processor: vuePlugin.processors['.vue'],
       rules,
     },

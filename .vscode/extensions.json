@@ -5,6 +5,7 @@
     "github.vscode-pull-request-github",
     "vscode-icons-team.vscode-icons",
     "redhat.vscode-yaml",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
   ]
 }
