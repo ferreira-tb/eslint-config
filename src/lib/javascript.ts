@@ -77,6 +77,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
       'no-lone-blocks': 'error',
       'no-lonely-if': 'error',
+      'no-loss-of-precision': 'error',
       'no-misleading-character-class': 'error',
       'no-multi-assign': 'error',
       'no-multi-str': 'error',

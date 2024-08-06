@@ -99,7 +99,6 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': 'error',
 
-    '@typescript-eslint/no-empty-interface': 'error',
     '@typescript-eslint/no-empty-object-type': ['error', {
       allowInterfaces: 'never',
       allowObjectTypes: 'never',
@@ -108,9 +107,10 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-extra-non-null-assertion': 'error',
     '@typescript-eslint/no-extraneous-class': 'error',
     '@typescript-eslint/no-floating-promises': ['error', {
+      allowForKnownSafePromises: options.knownSafePromises ?? [],
+      checkThenables: false,
       ignoreIIFE: true,
       ignoreVoid: true,
-      allowForKnownSafePromises: options.knownSafePromises ?? [],
     }],
     '@typescript-eslint/no-for-in-array': 'error',
 
@@ -126,9 +126,6 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
 
     'no-loop-func': 'off',
     '@typescript-eslint/no-loop-func': 'error',
-
-    'no-loss-of-precision': 'off',
-    '@typescript-eslint/no-loss-of-precision': 'error',
 
     '@typescript-eslint/no-meaningless-void-operator': 'error',
     '@typescript-eslint/no-misused-new': 'error',
@@ -190,7 +187,6 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-useless-constructor': 'error',
 
     '@typescript-eslint/no-useless-empty-export': 'error',
-    '@typescript-eslint/no-useless-template-literals': 'error',
     '@typescript-eslint/no-wrapper-object-types': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
 
