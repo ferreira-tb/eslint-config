@@ -8,7 +8,6 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
   const { unicorn: enabled = true } = options.features ?? {};
   if (!enabled) return {};
 
-  // @ts-expect-error: not typed
   const plugin = await interopDefault(import('eslint-plugin-unicorn'));
 
   return {
@@ -26,6 +25,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/no-await-in-promise-methods': 'error',
       'unicorn/no-invalid-fetch-options': 'error',
       'unicorn/no-invalid-remove-event-listener': 'error',
+      'unicorn/no-length-as-slice-end': 'error',
       'unicorn/no-magic-array-flat-depth': 'error',
       'unicorn/no-negation-in-equality-check': 'error',
       'unicorn/no-single-promise-in-promise-methods': 'error',

@@ -17,7 +17,6 @@ export async function defineConfig(options: ConfigOptions): Promise<Partial<Conf
     config.stylistic(options),
     config.perfectionist(options),
     config.unicorn(options),
-    config.vitest(options),
     config.tailwind(options),
 
     ignores,

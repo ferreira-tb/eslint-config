@@ -11,8 +11,6 @@ export interface ConfigOptions {
     /** @default true */
     unicorn?: boolean;
     /** @default false */
-    vitest?: boolean;
-    /** @default false */
     vue?: boolean;
   };
 
@@ -28,7 +26,6 @@ export interface ConfigOptions {
     tailwind?: Rules;
     typescript?: Rules;
     unicorn?: Rules;
-    vitest?: Rules;
     vue?: Rules;
   };
 
