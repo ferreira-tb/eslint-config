@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "vivaxy.vscode-conventional-commits",
-    "github.vscode-github-actions",
     "github.vscode-pull-request-github",
     "vscode-icons-team.vscode-icons",
     "redhat.vscode-yaml",

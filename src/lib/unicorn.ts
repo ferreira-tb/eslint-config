@@ -15,7 +15,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
     rules: {
       'unicorn/catch-error-name': ['error', { name: 'err' }],
       'unicorn/consistent-empty-array-spread': 'error',
-      'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: true }],
+      'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: false }],
       'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',
       'unicorn/no-array-for-each': 'off',
