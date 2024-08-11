@@ -24,10 +24,13 @@ export function javascript(options: ConfigOptions): ConfigObject {
     },
     rules: {
       'accessor-pairs': ['error', { enforceForClassMembers: true, setWithoutGet: true }],
-      'array-callback-return': ['error', {
-        checkForEach: false,
-        allowVoid: true,
-      }],
+      'array-callback-return': [
+        'error',
+        {
+          checkForEach: false,
+          allowVoid: true,
+        },
+      ],
       'block-scoped-var': 'error',
       'consistent-this': ['error', 'self'],
       'default-case-last': 'error',
@@ -121,10 +124,13 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'object-shorthand': ['error', 'always'],
       'operator-assignment': ['error', 'always'],
       'prefer-arrow-callback': 'error',
-      'prefer-const': ['error', {
-        destructuring: 'all',
-        ignoreReadBeforeAssign: true,
-      }],
+      'prefer-const': [
+        'error',
+        {
+          destructuring: 'all',
+          ignoreReadBeforeAssign: true,
+        },
+      ],
       'prefer-destructuring': 'off',
       'prefer-exponentiation-operator': 'error',
       'prefer-object-has-own': 'error',
@@ -134,13 +140,16 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'prefer-spread': 'error',
       'prefer-template': 'error',
       'require-atomic-updates': ['error', { allowProperties: true }],
-      'sort-imports': ['error', {
-        allowSeparatedGroups: false,
-        ignoreCase: false,
-        ignoreDeclarationSort: true,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-      }],
+      'sort-imports': [
+        'error',
+        {
+          allowSeparatedGroups: false,
+          ignoreCase: false,
+          ignoreDeclarationSort: true,
+          ignoreMemberSort: false,
+          memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        },
+      ],
       'symbol-description': 'off',
       'use-isnan': 'error',
       'valid-typeof': 'error',
