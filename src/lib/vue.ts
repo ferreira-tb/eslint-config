@@ -176,7 +176,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
       },
     ],
     'vue/v-for-delimiter-style': ['error', 'of'],
-    'vue/v-on-handler-style': 'off',
+    'vue/v-on-handler-style': ['error', 'inline-function'],
     'vue/v-on-style': ['error', 'shorthand'],
     'vue/v-slot-style': [
       'error',
