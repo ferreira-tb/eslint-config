@@ -8,7 +8,5 @@
   "editor.tabSize": 2,
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.enable": true,
-  "eslint.format.enable": true,
-  "eslint.useFlatConfig": true,
-  "eslint.validate": ["javascript", "json", "typescript", "vue"]
+  "eslint.useFlatConfig": true
 }
