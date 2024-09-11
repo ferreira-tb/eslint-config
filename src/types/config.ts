@@ -10,7 +10,7 @@ export interface FeaturesObject {
 }
 
 export interface ConfigOptions {
-  features?: FeaturesObject | (keyof FeaturesObject)[];
+  features?: FeaturesObject | (keyof FeaturesObject)[] | boolean;
 
   /** `tsconfig.json` files for TypeScript. */
   project: string[];

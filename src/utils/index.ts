@@ -12,7 +12,12 @@ export function isEnabled(
   config: ConfigOptions['features'],
   feature: keyof FeaturesObject
 ): boolean {
-  if (Array.isArray(config)) return config.includes(feature);
+  if (Array.isArray(config)) {
+    return config.includes(feature);
+  } else if (typeof config === 'boolean') {
+    return config;
+  }
+
   switch (feature) {
     case 'perfectionist':
       return config?.perfectionist ?? true;
