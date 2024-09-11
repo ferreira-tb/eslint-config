@@ -1,6 +1,6 @@
 import process from 'node:process';
 import { Glob } from '../utils/enum';
-import { interopDefault } from '../utils';
+import { interopDefault, isEnabled } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
 
 /**
@@ -13,7 +13,9 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
   ]);
 
   const files = [Glob.Typescript];
-  if (options.features?.vue) files.push(Glob.Vue);
+  if (isEnabled(options.features, 'vue')) {
+    files.push(Glob.Vue);
+  }
 
   const rules: Rules = {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -292,6 +294,11 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     ...options.overrides?.typescript,
   };
 
+  const extraFileExtensions: string[] = [];
+  if (isEnabled(options.features, 'vue')) {
+    extraFileExtensions.push('.vue');
+  }
+
   return {
     files,
     languageOptions: {
@@ -301,7 +308,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
       parserOptions: {
         project: options.project,
         tsconfigRootDir: process.cwd(),
-        extraFileExtensions: options.features?.vue ? ['.vue'] : [],
+        extraFileExtensions,
       },
     },
     plugins: { '@typescript-eslint': tsPlugin },

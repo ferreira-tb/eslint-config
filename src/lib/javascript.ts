@@ -1,5 +1,6 @@
 import globals from 'globals';
 import { Glob } from '../utils/enum';
+import { isEnabled } from '../utils';
 import type { ConfigObject, ConfigOptions } from '../types';
 
 /**
@@ -7,7 +8,9 @@ import type { ConfigObject, ConfigOptions } from '../types';
  */
 export function javascript(options: ConfigOptions): ConfigObject {
   const files = [Glob.All];
-  if (options.features?.vue) files.push(Glob.Vue);
+  if (isEnabled(options.features, 'vue')) {
+    files.push(Glob.Vue);
+  }
 
   return {
     files,

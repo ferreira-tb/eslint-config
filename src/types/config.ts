@@ -1,14 +1,16 @@
+export interface FeaturesObject {
+  /** @default true */
+  perfectionist?: boolean;
+  /** @default false */
+  tailwind?: boolean;
+  /** @default true */
+  unicorn?: boolean;
+  /** @default false */
+  vue?: boolean;
+}
+
 export interface ConfigOptions {
-  features?: {
-    /** @default true */
-    perfectionist?: boolean;
-    /** @default false */
-    tailwind?: boolean;
-    /** @default true */
-    unicorn?: boolean;
-    /** @default false */
-    vue?: boolean;
-  };
+  features?: FeaturesObject | (keyof FeaturesObject)[];
 
   /** `tsconfig.json` files for TypeScript. */
   project: string[];

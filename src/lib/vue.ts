@@ -1,13 +1,13 @@
 import process from 'node:process';
 import { Glob } from '../utils/enum';
-import { interopDefault } from '../utils';
+import { interopDefault, isEnabled } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
 
 /**
  * @see https://eslint.vuejs.org/rules/
  */
 export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
-  if (!options.features?.vue) return [];
+  if (!isEnabled(options.features, 'vue')) return [];
 
   const [vuePlugin, vueParser, tsParser] = await Promise.all([
     // @ts-expect-error no types

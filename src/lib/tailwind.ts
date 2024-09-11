@@ -1,11 +1,11 @@
-import { interopDefault } from '../utils';
+import { interopDefault, isEnabled } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
 
 /**
  * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/tree/master/docs/rules
  */
 export async function tailwind(options: ConfigOptions): Promise<Partial<ConfigObject>> {
-  if (!options.features?.tailwind) return {};
+  if (!isEnabled(options.features, 'tailwind')) return {};
 
   // @ts-expect-error no types
   const plugin = await interopDefault(import('eslint-plugin-tailwindcss'));

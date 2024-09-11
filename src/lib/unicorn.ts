@@ -1,12 +1,11 @@
-import { interopDefault } from '../utils';
+import { interopDefault, isEnabled } from '../utils';
 import type { ConfigObject, ConfigOptions } from '../types';
 
 /**
  * @see https://github.com/sindresorhus/eslint-plugin-unicorn#rules
  */
 export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObject>> {
-  const { unicorn: enabled = true } = options.features ?? {};
-  if (!enabled) return {};
+  if (!isEnabled(options.features, 'unicorn')) return {};
 
   const plugin = await interopDefault(import('eslint-plugin-unicorn'));
 
