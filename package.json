@@ -1,11 +1,11 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "5.3.2",
+  "version": "5.3.3",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@9.11.0",
   "homepage": "https://github.com/ferreira-tb/eslint-config",
   "repository": {
     "type": "git",
@@ -20,9 +20,6 @@
     "typescript",
     "vue"
   ],
-  "lint-staged": {
-    "*.{?(c|m)@(j|t)s,css,vue,md,json}": "prettier --write"
-  },
   "scripts": {
     "build": "vite build",
     "lint": "eslint . --config eslint.config.js --cache",
@@ -33,9 +30,9 @@
     "update": "miho update major -t"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.5.0",
-    "@typescript-eslint/parser": "^8.5.0",
-    "eslint-plugin-perfectionist": "^3.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint-plugin-perfectionist": "^3.6.0",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "eslint-plugin-unicorn": "^55.0.0",
     "eslint-plugin-vue": "^9.28.0",
@@ -43,14 +40,13 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "devDependencies": {
-    "@types/node": "^22.5.4",
-    "eslint": "^9.10.0",
-    "husky": "^9.1.5",
-    "lint-staged": "^15.2.10",
+    "@types/node": "^22.6.0",
+    "eslint": "^9.11.0",
+    "husky": "^9.1.6",
     "prettier": "^3.3.3",
     "tslib": "^2.7.0",
     "typescript": "^5.6.2",
-    "vite": "^5.4.4",
+    "vite": "^5.4.7",
     "vite-plugin-dts": "^4.2.1"
   },
   "peerDependencies": {
