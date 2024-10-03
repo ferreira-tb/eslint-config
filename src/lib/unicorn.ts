@@ -14,6 +14,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
     rules: {
       'unicorn/catch-error-name': ['error', { name: 'err' }],
       'unicorn/consistent-empty-array-spread': 'error',
+      'unicorn/consistent-existence-index-check': 'error',
       'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: false }],
       'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',
@@ -39,6 +40,8 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/prefer-dom-node-dataset': 'error',
       'unicorn/prefer-dom-node-remove': 'error',
       'unicorn/prefer-dom-node-text-content': 'error',
+      'unicorn/prefer-global-this': 'error',
+      'unicorn/prefer-math-min-max': 'error',
       'unicorn/prefer-modern-dom-apis': 'error',
       'unicorn/prefer-node-protocol': 'error',
       'unicorn/prefer-number-properties': 'error',
