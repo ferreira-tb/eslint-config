@@ -40,7 +40,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/prefer-dom-node-dataset': 'error',
       'unicorn/prefer-dom-node-remove': 'error',
       'unicorn/prefer-dom-node-text-content': 'error',
-      'unicorn/prefer-global-this': 'error',
+      'unicorn/prefer-global-this': 'off',
       'unicorn/prefer-math-min-max': 'error',
       'unicorn/prefer-modern-dom-apis': 'error',
       'unicorn/prefer-node-protocol': 'error',
