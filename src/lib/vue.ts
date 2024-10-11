@@ -10,7 +10,6 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
   if (!isEnabled(options.features, 'vue')) return [];
 
   const [vuePlugin, vueParser, tsParser] = await Promise.all([
-    // @ts-expect-error no types
     interopDefault(import('eslint-plugin-vue')),
     interopDefault(import('vue-eslint-parser')),
     interopDefault(import('@typescript-eslint/parser')),
@@ -84,6 +83,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/no-async-in-computed-properties': 'error',
     'vue/no-boolean-default': ['error', 'no-default'],
     'vue/no-computed-properties-in-data': 'error',
+    'vue/no-deprecated-delete-set': 'error',
     'vue/no-dupe-keys': 'error',
     'vue/no-dupe-v-else-if': 'error',
     'vue/no-duplicate-attributes': [
