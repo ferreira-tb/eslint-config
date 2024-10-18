@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "5.4.5",
+  "version": "5.4.6",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.7.6",
-    "eslint": "^9.12.0",
+    "eslint": "^9.13.0",
     "husky": "^9.1.6",
     "prettier": "^3.3.3",
     "tslib": "^2.8.0",
