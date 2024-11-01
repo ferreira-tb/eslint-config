@@ -285,7 +285,10 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': [
       'error',
-      { requireDefaultForNonUnion: true },
+      {
+        considerDefaultExhaustiveForUnions: true,
+        requireDefaultForNonUnion: true,
+      },
     ],
     '@typescript-eslint/unbound-method': 'error',
     '@typescript-eslint/unified-signatures': ['error', { ignoreDifferentlyNamedParameters: true }],
