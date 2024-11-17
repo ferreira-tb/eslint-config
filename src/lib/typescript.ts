@@ -48,9 +48,6 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
 
-    'consistent-return': 'off',
-    '@typescript-eslint/consistent-return': 'off',
-
     '@typescript-eslint/consistent-type-assertions': [
       'error',
       {
@@ -116,9 +113,6 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-duplicate-enum-values': 'error',
     '@typescript-eslint/no-duplicate-type-constituents': 'error',
     '@typescript-eslint/no-dynamic-delete': 'error',
-
-    'no-empty-function': 'off',
-    '@typescript-eslint/no-empty-function': 'error',
 
     '@typescript-eslint/no-empty-object-type': [
       'error',
