@@ -49,7 +49,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
 
     'consistent-return': 'off',
-    '@typescript-eslint/consistent-return': 'error',
+    '@typescript-eslint/consistent-return': 'off',
 
     '@typescript-eslint/consistent-type-assertions': [
       'error',
