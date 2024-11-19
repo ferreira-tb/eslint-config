@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "5.4.21",
+  "version": "5.4.22",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -24,17 +24,16 @@
     "build": "vite build",
     "lint": "eslint . --config eslint.config.js --cache",
     "lint-fix": "eslint . --config eslint.config.js --fix",
-    "prepare": "husky",
     "release": "pnpm run build && pnpm publish",
     "type-check": "tsc --noEmit",
     "update": "miho update major -t"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.14.0",
-    "@typescript-eslint/parser": "^8.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
     "eslint-plugin-perfectionist": "^3.9.1",
     "eslint-plugin-tailwindcss": "^3.17.5",
-    "eslint-plugin-unicorn": "^56.0.0",
+    "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-vue": "^9.31.0",
     "globals": "^15.12.0",
     "vue-eslint-parser": "^9.4.3"
@@ -42,7 +41,6 @@
   "devDependencies": {
     "@types/node": "^22.9.0",
     "eslint": "^9.15.0",
-    "husky": "^9.1.6",
     "prettier": "^3.3.3",
     "tslib": "^2.8.1",
     "typescript": "^5.6.3",
