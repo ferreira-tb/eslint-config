@@ -17,6 +17,11 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     files.push(Glob.Vue);
   }
 
+  const extraFileExtensions: string[] = [];
+  if (isEnabled(options.features, 'vue')) {
+    extraFileExtensions.push('.vue');
+  }
+
   const rules: Rules = {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
 
@@ -256,7 +261,13 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/prefer-optional-chain': 'error',
 
     'prefer-promise-reject-errors': 'off',
-    '@typescript-eslint/prefer-promise-reject-errors': 'error',
+    '@typescript-eslint/prefer-promise-reject-errors': [
+      'error',
+      {
+        allowThrowingAny: false,
+        allowThrowingUnknown: false,
+      },
+    ],
 
     '@typescript-eslint/prefer-readonly': 'error',
     '@typescript-eslint/prefer-readonly-parameter-types': 'off',
@@ -290,11 +301,6 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
 
     ...options.overrides?.typescript,
   };
-
-  const extraFileExtensions: string[] = [];
-  if (isEnabled(options.features, 'vue')) {
-    extraFileExtensions.push('.vue');
-  }
 
   return {
     files,
