@@ -2,6 +2,8 @@ export interface FeaturesObject {
   /** @default true */
   perfectionist?: boolean;
   /** @default false */
+  svelte?: boolean;
+  /** @default false */
   tailwind?: boolean;
   /** @default true */
   unicorn?: boolean;

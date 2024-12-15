@@ -12,6 +12,10 @@ export function javascript(options: ConfigOptions): ConfigObject {
     files.push(Glob.Vue);
   }
 
+  if (isEnabled(options.features, 'svelte')) {
+    files.push(Glob.Svelte);
+  }
+
   return {
     files,
     languageOptions: {

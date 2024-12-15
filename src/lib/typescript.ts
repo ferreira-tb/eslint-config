@@ -17,9 +17,17 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     files.push(Glob.Vue);
   }
 
+  if (isEnabled(options.features, 'svelte')) {
+    files.push(Glob.Svelte);
+  }
+
   const extraFileExtensions: string[] = [];
   if (isEnabled(options.features, 'vue')) {
     extraFileExtensions.push('.vue');
+  }
+
+  if (isEnabled(options.features, 'svelte')) {
+    extraFileExtensions.push('.svelte');
   }
 
   const rules: Rules = {

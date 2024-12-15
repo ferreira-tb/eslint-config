@@ -1,6 +1,7 @@
 export enum Glob {
   All = '**/*.?([cm])[jt]s?(x)',
   Javascript = '**/*.?([cm])js?(x)',
+  Svelte = '**/*.svelte',
   Typescript = '**/*.?([cm])ts?(x)',
   Vue = '**/*.vue',
 }
@@ -12,6 +13,7 @@ export enum GlobIgnore {
   Log = '**/log?(s)',
   NodeModules = '**/node_modules',
   Out = '**/out',
+  SvelteKit = '**/.svelte-kit',
   Target = '**/target',
   Temp = '**/?(.)temp',
 }
