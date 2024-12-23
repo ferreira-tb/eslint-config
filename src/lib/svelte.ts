@@ -17,7 +17,6 @@ export async function svelte(options: ConfigOptions): Promise<Partial<ConfigObje
     'svelte/infinite-reactive-loop': 'error',
     'svelte/no-at-debug-tags': 'off',
     'svelte/no-at-html-tags': 'error',
-    'svelte/no-deprecated-raw-special-elements': 'error',
     'svelte/no-dom-manipulating': 'error',
     'svelte/no-dupe-else-if-blocks': 'error',
     'svelte/no-dupe-on-directives': 'error',
