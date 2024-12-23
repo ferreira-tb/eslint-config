@@ -15,7 +15,14 @@ export default defineConfig({
       fileName: 'index',
     },
     rollupOptions: {
-      external: [/^node:/, /^@typescript-eslint/, /^eslint-plugin/, 'globals', 'vue-eslint-parser'],
+      external: [
+        /^node:/,
+        /^@typescript-eslint/,
+        /^eslint-plugin/,
+        'globals',
+        'vue-eslint-parser',
+        'svelte-eslint-parser',
+      ],
     },
   },
 });
