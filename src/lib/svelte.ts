@@ -12,7 +12,6 @@ export async function svelte(options: ConfigOptions): Promise<Partial<ConfigObje
   ]);
 
   const rules: Rules = {
-    ...(sveltePlugin as any).configs.recommended,
     ...options.overrides?.svelte,
   };
 
