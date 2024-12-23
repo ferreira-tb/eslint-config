@@ -21,6 +21,7 @@ export interface ConfigOptions {
   overrides?: {
     javascript?: Rules;
     perfectionist?: Rules;
+    svelte?: Rules;
     tailwind?: Rules;
     typescript?: Rules;
     unicorn?: Rules;
