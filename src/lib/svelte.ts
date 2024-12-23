@@ -17,7 +17,10 @@ export async function svelte(options: ConfigOptions): Promise<Partial<ConfigObje
   };
 
   return [
-    { plugins: { svelte: sveltePlugin } },
+    {
+      plugins: { svelte: sveltePlugin },
+      rules,
+    },
     {
       files: [Glob.Svelte],
       languageOptions: {
@@ -29,6 +32,5 @@ export async function svelte(options: ConfigOptions): Promise<Partial<ConfigObje
         },
       },
     },
-    { rules },
   ];
 }
