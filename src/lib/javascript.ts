@@ -21,6 +21,11 @@ export function javascript(options: ConfigOptions): ConfigObject {
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: isEnabled(options.features, 'react'),
+        },
+      },
       globals: {
         ...globals.browser,
         ...globals.es2021,

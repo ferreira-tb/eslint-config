@@ -21,6 +21,8 @@ export function isEnabled(
   switch (feature) {
     case 'perfectionist':
       return config?.perfectionist ?? true;
+    case 'react':
+      return config?.react ?? false;
     case 'svelte':
       return config?.svelte ?? false;
     case 'tailwind':

@@ -320,6 +320,9 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
         project: options.project,
         tsconfigRootDir: process.cwd(),
         extraFileExtensions,
+        ecmaFeatures: {
+          jsx: isEnabled(options.features, 'react'),
+        },
       },
     },
     plugins: { '@typescript-eslint': tsPlugin },
