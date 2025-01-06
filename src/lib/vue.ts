@@ -107,7 +107,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
       {
         disallowVueBuiltInComponents: true,
         disallowVue3BuiltInComponents: true,
-        htmlElementCaseSensitive: false,
+        htmlElementCaseSensitive: true,
       },
     ],
     'vue/no-reserved-keys': 'error',
