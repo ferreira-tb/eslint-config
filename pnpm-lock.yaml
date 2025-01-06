@@ -33,7 +33,7 @@ importers:
         specifier: ^15.14.0
         version: 15.14.0
       svelte:
-        specifier: ^5.16.1
+        specifier: ^5.16.2
         version: 5.16.2
       svelte-eslint-parser:
         specifier: ^1.0.0-next.6

@@ -1,11 +1,11 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "6.0.3",
+  "version": "6.0.4",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@9.15.3",
   "homepage": "https://github.com/ferreira-tb/eslint-config",
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
-    "svelte": "^5.16.1",
+    "svelte": "^5.16.2",
     "svelte-eslint-parser": "^1.0.0-next.6",
     "vue-eslint-parser": "^9.4.3"
   },

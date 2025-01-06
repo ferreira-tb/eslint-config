@@ -102,7 +102,14 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/no-parsing-error': 'error',
     'vue/no-ref-as-operand': 'error',
     'vue/no-ref-object-reactivity-loss': 'error',
-    'vue/no-reserved-component-names': 'error',
+    'vue/no-reserved-component-names': [
+      'error',
+      {
+        disallowVueBuiltInComponents: true,
+        disallowVue3BuiltInComponents: true,
+        htmlElementCaseSensitive: false,
+      },
+    ],
     'vue/no-reserved-keys': 'error',
     'vue/no-reserved-props': 'error',
     'vue/no-required-prop-with-default': ['error', { autofix: true }],
