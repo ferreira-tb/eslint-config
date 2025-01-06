@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "6.0.5",
+  "version": "6.0.6",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -29,15 +29,15 @@
     "update": "miho update major -t"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.19.0",
-    "@typescript-eslint/parser": "^8.19.0",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
     "eslint-plugin-perfectionist": "^4.6.0",
     "eslint-plugin-svelte": "^3.0.0-next.10",
     "eslint-plugin-tailwindcss": "^3.17.5",
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
-    "svelte": "^5.16.2",
+    "svelte": "^5.16.4",
     "svelte-eslint-parser": "^1.0.0-next.6",
     "vue-eslint-parser": "^9.4.3"
   },
