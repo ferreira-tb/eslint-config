@@ -23,6 +23,10 @@ export function isEnabled(
       return config?.perfectionist ?? true;
     case 'react':
       return config?.react ?? false;
+    case 'reactCompiler':
+      return config?.reactCompiler ?? config?.react ?? false;
+    case 'reactHooks':
+      return config?.reactHooks ?? config?.react ?? false;
     case 'svelte':
       return config?.svelte ?? false;
     case 'tailwind':

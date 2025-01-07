@@ -4,6 +4,10 @@ export interface FeaturesObject {
   /** @default false */
   react?: boolean;
   /** @default false */
+  reactCompiler?: boolean;
+  /** @default false */
+  reactHooks?: boolean;
+  /** @default false */
   svelte?: boolean;
   /** @default false */
   tailwind?: boolean;
@@ -23,6 +27,9 @@ export interface ConfigOptions {
   overrides?: {
     javascript?: Rules;
     perfectionist?: Rules;
+    react?: Rules;
+    reactCompiler?: Rules;
+    reactHooks?: Rules;
     svelte?: Rules;
     tailwind?: Rules;
     typescript?: Rules;

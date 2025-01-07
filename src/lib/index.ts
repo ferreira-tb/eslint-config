@@ -1,4 +1,5 @@
 export * from './vue';
+export * from './react';
 export * from './svelte';
 export * from './unicorn';
 export * from './tailwind';

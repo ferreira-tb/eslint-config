@@ -12,6 +12,7 @@ export async function defineConfig(options: ConfigOptions): Promise<Partial<Conf
     config.typescript(options),
     ...(await config.vue(options)),
     ...(await config.svelte(options)),
+    config.react(options),
     config.perfectionist(options),
     config.unicorn(options),
     config.tailwind(options),
