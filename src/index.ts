@@ -13,6 +13,8 @@ export async function defineConfig(options: ConfigOptions): Promise<Partial<Conf
     ...(await config.vue(options)),
     ...(await config.svelte(options)),
     config.react(options),
+    config.reactHooks(options),
+    config.reactCompiler(options),
     config.perfectionist(options),
     config.unicorn(options),
     config.tailwind(options),
