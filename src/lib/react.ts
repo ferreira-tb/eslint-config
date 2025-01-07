@@ -16,8 +16,8 @@ export async function react(options: ConfigOptions): Promise<Partial<ConfigObjec
       'react/function-component-definition': [
         'error',
         {
-          namedComponents: 'function-declaration',
-          unnamedComponents: 'function-declaration',
+          namedComponents: ['function-declaration'],
+          unnamedComponents: ['function-declaration'],
         },
       ],
       'react/hook-use-state': ['error', { allowDestructuredState: true }],
