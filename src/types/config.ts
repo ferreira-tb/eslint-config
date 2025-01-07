@@ -39,6 +39,8 @@ export interface ConfigOptions {
 
   /** @see https://typescript-eslint.io/rules/no-floating-promises#allowforknownsafepromises */
   knownSafePromises?: KnownSafePromise[];
+  /** @see https://github.com/jsx-eslint/eslint-plugin-react#configuration */
+  reactVersion?: string;
 }
 
 export interface Ignores {
@@ -69,4 +71,7 @@ export interface ConfigObject {
   plugins?: Record<string, unknown>;
   processor?: unknown;
   rules: Rules;
+
+  /** @see https://eslint.org/docs/latest/use/configure/configuration-files#configuring-shared-settings */
+  settings?: Record<string, unknown>;
 }
