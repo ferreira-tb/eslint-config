@@ -13,13 +13,7 @@ export async function react(options: ConfigOptions): Promise<Partial<ConfigObjec
     plugins: { react: plugin },
     rules: {
       'react/button-has-type': 'error',
-      'react/function-component-definition': [
-        'error',
-        {
-          namedComponents: ['function-declaration'],
-          unnamedComponents: ['function-declaration'],
-        },
-      ],
+      'react/function-component-definition': 'off',
       'react/hook-use-state': ['error', { allowDestructuredState: true }],
       'react/jsx-boolean-value': ['error', 'never', { assumeUndefinedIsFalse: true }],
       'react/jsx-key': [
