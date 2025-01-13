@@ -35,7 +35,7 @@
     "@typescript-eslint/parser": "^8.19.1",
     "eslint-plugin-perfectionist": "^4.6.0",
     "eslint-plugin-react": "^7.37.3",
-    "eslint-plugin-react-compiler": "19.0.0-beta-63e3235-20250105",
+    "eslint-plugin-react-compiler": "19.0.0-beta-55955c9-20241229",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-svelte": "^3.0.0-next.10",
     "eslint-plugin-tailwindcss": "^3.17.5",

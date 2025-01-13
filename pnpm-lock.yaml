@@ -21,8 +21,8 @@ importers:
         specifier: ^7.37.3
         version: 7.37.3(eslint@9.18.0(jiti@1.21.7))
       eslint-plugin-react-compiler:
-        specifier: 19.0.0-beta-63e3235-20250105
-        version: 19.0.0-beta-63e3235-20250105(eslint@9.18.0(jiti@1.21.7))
+        specifier: 19.0.0-beta-55955c9-20241229
+        version: 19.0.0-beta-55955c9-20241229(eslint@9.18.0(jiti@1.21.7))
       eslint-plugin-react-hooks:
         specifier: ^5.1.0
         version: 5.1.0(eslint@9.18.0(jiti@1.21.7))
@@ -1032,8 +1032,8 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0'
 
-  eslint-plugin-react-compiler@19.0.0-beta-63e3235-20250105:
-    resolution: {integrity: sha512-Smts5x+u+rRopr0926jCXFPkS8D8hFJexDvTW41V0Xu/xHgd4pnGWiJQRBsvTEARzOdJ6NdlmYs4n+O4Thn2iA==}
+  eslint-plugin-react-compiler@19.0.0-beta-55955c9-20241229:
+    resolution: {integrity: sha512-KsE6bQrNvtPDbMb9EolZ2C+Z2/uv2Y5cAUgN+pzbriXjKlf1FkbgiyE153m2mIT6gEZq2OrtFvX7uJj5IrNQlg==}
     engines: {node: ^14.17.0 || ^16.0.0 || >= 18.0.0}
     peerDependencies:
       eslint: '>=7'
@@ -3391,7 +3391,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-react-compiler@19.0.0-beta-63e3235-20250105(eslint@9.18.0(jiti@1.21.7)):
+  eslint-plugin-react-compiler@19.0.0-beta-55955c9-20241229(eslint@9.18.0(jiti@1.21.7)):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/parser': 7.26.3
