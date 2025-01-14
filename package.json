@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "6.2.1",
+  "version": "6.2.2",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -42,7 +42,7 @@
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
-    "svelte": "^5.17.4",
+    "svelte": "^5.17.5",
     "svelte-eslint-parser": "^1.0.0-next.11",
     "vue-eslint-parser": "^9.4.3"
   },
