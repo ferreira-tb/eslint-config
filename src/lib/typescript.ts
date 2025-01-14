@@ -180,6 +180,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
         },
       },
     ],
+    '@typescript-eslint/no-misused-spread': 'error',
     '@typescript-eslint/no-mixed-enums': 'error',
     '@typescript-eslint/no-namespace': 'error',
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
