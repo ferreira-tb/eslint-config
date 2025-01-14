@@ -25,7 +25,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
       {
         script: { lang: 'ts' },
         style: {
-          lang: 'scss',
+          lang: ['postcss', 'scss'],
           allowNoLang: true,
         },
       },
