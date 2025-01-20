@@ -37,9 +37,17 @@ export interface ConfigOptions {
     vue?: Rules;
   };
 
-  /** @see https://typescript-eslint.io/rules/no-floating-promises#allowforknownsafepromises */
+  /**
+   * @see https://typescript-eslint.io/rules/no-floating-promises/#allowforknownsafecalls
+   */
+  knownSafeCalls?: KnownSafeCalls[];
+  /**
+   * @see https://typescript-eslint.io/rules/no-floating-promises#allowforknownsafepromises
+   */
   knownSafePromises?: KnownSafePromise[];
-  /** @see https://github.com/jsx-eslint/eslint-plugin-react#configuration */
+  /**
+   * @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
+   */
   reactVersion?: string;
 }
 
@@ -55,6 +63,12 @@ export interface KnownSafePromise {
   from: string;
   name: string;
   package?: string;
+}
+
+export interface KnownSafeCalls {
+  from: string;
+  name: string;
+  path: string;
 }
 
 /** @see https://eslint.org/docs/latest/use/configure/configuration-files-new#configuration-objects */

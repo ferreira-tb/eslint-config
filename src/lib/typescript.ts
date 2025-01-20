@@ -140,6 +140,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     '@typescript-eslint/no-floating-promises': [
       'error',
       {
+        allowForKnownSafeCalls: options.knownSafeCalls ?? [],
         allowForKnownSafePromises: options.knownSafePromises ?? [],
         checkThenables: false,
         ignoreIIFE: true,
