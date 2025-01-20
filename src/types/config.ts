@@ -59,17 +59,15 @@ export type Severity = 'error' | 'warn' | 'off' | 0 | 1;
 
 export type Rules = Record<string, Severity | any[]>;
 
-export interface KnownSafePromise {
-  from: string;
-  name: string;
+interface TypeOrValueSpecifier {
+  from: 'file' | 'lib' | 'package';
+  name: string | string[];
   package?: string;
+  path?: string;
 }
 
-export interface KnownSafeCalls {
-  from: string;
-  name: string;
-  path: string;
-}
+export type KnownSafePromise = TypeOrValueSpecifier;
+export type KnownSafeCalls = TypeOrValueSpecifier;
 
 /** @see https://eslint.org/docs/latest/use/configure/configuration-files-new#configuration-objects */
 export interface ConfigObject {
