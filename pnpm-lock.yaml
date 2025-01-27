@@ -28,7 +28,7 @@ importers:
         version: 5.1.0(eslint@9.18.0(jiti@1.21.7))
       eslint-plugin-svelte:
         specifier: ^3.0.0-next.15
-        version: 3.0.0-next.15(eslint@9.18.0(jiti@1.21.7))(svelte@5.19.0)
+        version: 3.0.0-next.16(eslint@9.18.0(jiti@1.21.7))(svelte@5.19.0)
       eslint-plugin-tailwindcss:
         specifier: ^3.18.0
         version: 3.18.0(tailwindcss@3.4.17)
@@ -1050,8 +1050,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
 
-  eslint-plugin-svelte@3.0.0-next.15:
-    resolution: {integrity: sha512-EocAk0ngTma6EivkPtTz8SiCjiYk0x9j09Y7x/eyq1EsMtldFPPE/Njhg44xFYaDSk3UEUPjqt+ddD/oqCkp9g==}
+  eslint-plugin-svelte@3.0.0-next.16:
+    resolution: {integrity: sha512-/sA5tMPT661j3hc8GdQpalwWdpsC+tWzXnbU6fGO+Pixet9/4nY2o8bT0j0NZCjaPPftTnXN/s1lrfyj06+AFQ==}
     engines: {node: ^18.20.4 || ^20.18.0 || >=22.10.0}
     peerDependencies:
       eslint: ^8.57.1 || ^9.0.0
@@ -3429,7 +3429,7 @@ snapshots:
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
 
-  eslint-plugin-svelte@3.0.0-next.15(eslint@9.18.0(jiti@1.21.7))(svelte@5.19.0):
+  eslint-plugin-svelte@3.0.0-next.16(eslint@9.18.0(jiti@1.21.7))(svelte@5.19.0):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.18.0(jiti@1.21.7))
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -3437,9 +3437,9 @@ snapshots:
       eslint-compat-utils: 0.6.4(eslint@9.18.0(jiti@1.21.7))
       esutils: 2.0.3
       known-css-properties: 0.35.0
-      postcss: 8.4.49
-      postcss-load-config: 3.1.4(postcss@8.4.49)
-      postcss-safe-parser: 7.0.1(postcss@8.4.49)
+      postcss: 8.5.1
+      postcss-load-config: 3.1.4(postcss@8.5.1)
+      postcss-safe-parser: 7.0.1(postcss@8.5.1)
       semver: 7.6.3
       svelte-eslint-parser: 1.0.0-next.13(svelte@5.19.0)
     optionalDependencies:
@@ -4188,12 +4188,12 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.5.1
 
-  postcss-load-config@3.1.4(postcss@8.4.49):
+  postcss-load-config@3.1.4(postcss@8.5.1):
     dependencies:
       lilconfig: 2.1.0
       yaml: 1.10.2
     optionalDependencies:
-      postcss: 8.4.49
+      postcss: 8.5.1
 
   postcss-load-config@4.0.2(postcss@8.5.1):
     dependencies:
@@ -4207,9 +4207,9 @@ snapshots:
       postcss: 8.5.1
       postcss-selector-parser: 6.1.2
 
-  postcss-safe-parser@7.0.1(postcss@8.4.49):
+  postcss-safe-parser@7.0.1(postcss@8.5.1):
     dependencies:
-      postcss: 8.4.49
+      postcss: 8.5.1
 
   postcss-scss@4.0.9(postcss@8.4.49):
     dependencies:
