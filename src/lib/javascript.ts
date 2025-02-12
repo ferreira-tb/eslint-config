@@ -7,7 +7,7 @@ import type { ConfigObject, ConfigOptions } from '../types';
  * @see https://eslint.org/docs/latest/rules/
  */
 export function javascript(options: ConfigOptions): ConfigObject {
-  const files = [Glob.All];
+  const files = [Glob.All, Glob.Html];
   if (isEnabled(options.features, 'vue')) {
     files.push(Glob.Vue);
   }
