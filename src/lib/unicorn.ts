@@ -13,6 +13,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
     plugins: { unicorn: plugin },
     rules: {
       'unicorn/catch-error-name': ['error', { name: 'err' }],
+      'unicorn/consistent-date-clone': 'error',
       'unicorn/consistent-empty-array-spread': 'error',
       'unicorn/consistent-existence-index-check': 'error',
       'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: false }],

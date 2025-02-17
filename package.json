@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "6.2.10",
+  "version": "6.3.0",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -32,15 +32,15 @@
     "update": "miho update major -t"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.24.0",
-    "@typescript-eslint/parser": "^8.24.0",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
     "eslint-plugin-perfectionist": "^4.9.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-compiler": "^19.0.0-beta-e552027-20250112",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-svelte": "^3.0.0-next.18",
     "eslint-plugin-tailwindcss": "^3.18.0",
-    "eslint-plugin-unicorn": "^56.0.1",
+    "eslint-plugin-unicorn": "^57.0.0",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.15.0",
     "svelte": "^5.20.1",
