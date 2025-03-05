@@ -95,6 +95,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     ],
     'vue/no-export-in-script-setup': 'error',
     'vue/no-expose-after-await': 'error',
+    'vue/no-import-compiler-macros': 'error',
     'vue/no-lifecycle-after-await': 'error',
     'vue/no-lone-template': 'error',
     'vue/no-multiple-objects-in-class': 'error',
@@ -183,7 +184,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
       },
     ],
     'vue/v-for-delimiter-style': ['error', 'of'],
-    'vue/v-on-handler-style': ['error', 'inline-function'],
+    'vue/v-on-handler-style': 'off',
     'vue/v-on-style': ['error', 'shorthand'],
     'vue/v-slot-style': [
       'error',
