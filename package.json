@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "6.5.1",
+  "version": "6.5.2",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -32,8 +32,8 @@
     "update": "miho update major -t"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.26.0",
-    "@typescript-eslint/parser": "^8.26.0",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
     "eslint-plugin-perfectionist": "^4.10.1",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-compiler": "=19.0.0-beta-40c6c23-20250301",
@@ -57,7 +57,7 @@
     "vite-plugin-dts": "^4.5.3"
   },
   "peerDependencies": {
-    "eslint": "^9.21.0",
+    "eslint": "^9.22.0",
     "typescript": "^5.8.2"
   },
   "engines": {
