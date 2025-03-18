@@ -35,6 +35,8 @@ export async function svelte(options: ConfigOptions): Promise<Partial<ConfigObje
     'svelte/no-store-async': 'error',
     'svelte/no-target-blank': 'error',
     'svelte/no-unknown-style-directive-property': 'error',
+    'svelte/no-unnecessary-state-wrap': 'error',
+    'svelte/no-unused-props': 'error',
     'svelte/no-unused-svelte-ignore': 'error',
     'svelte/no-useless-mustaches': 'error',
     'svelte/require-each-key': 'error',
