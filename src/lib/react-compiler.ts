@@ -4,7 +4,6 @@ import type { ConfigObject, ConfigOptions } from '../types';
 export async function reactCompiler(options: ConfigOptions): Promise<Partial<ConfigObject>> {
   if (!isEnabled(options.features, 'reactCompiler')) return {};
 
-  // @ts-expect-error no types
   const plugin = await interopDefault(import('eslint-plugin-react-compiler'));
 
   return {
