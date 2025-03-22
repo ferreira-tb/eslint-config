@@ -77,14 +77,13 @@ export type KnownSafeCalls = TypeOrValueSpecifier;
 export interface ConfigObject {
   files: string[];
   ignores?: Ignores['ignores'];
-  languageOptions: {
+  languageOptions?: {
     ecmaVersion?: 'latest';
     globals?: Record<string, boolean | 'readonly' | 'writeable'>;
     parser?: unknown;
     parserOptions?: Record<string, unknown>;
     sourceType?: 'module';
   };
-  overrides?: Record<string, unknown>[];
   plugins?: Record<string, unknown>;
   processor?: unknown;
   rules: Rules;

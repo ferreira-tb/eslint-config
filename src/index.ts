@@ -9,7 +9,7 @@ export async function defineConfig(options: ConfigOptions): Promise<Partial<Conf
 
   const objects: Partial<ConfigObject>[] = await Promise.all([
     config.javascript(options),
-    config.typescript(options),
+    ...(await config.typescript(options)),
     ...(await config.vue(options)),
     ...(await config.svelte(options)),
     ...(await config.react(options)),

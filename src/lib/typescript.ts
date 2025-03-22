@@ -6,7 +6,7 @@ import type { ConfigObject, ConfigOptions, Rules } from '../types';
 /**
  * @see https://typescript-eslint.io/rules/
  */
-export async function typescript(options: ConfigOptions): Promise<ConfigObject> {
+export async function typescript(options: ConfigOptions): Promise<ConfigObject[]> {
   const [tsParser, tsPlugin] = await Promise.all([
     interopDefault(import('@typescript-eslint/parser')),
     interopDefault(import('@typescript-eslint/eslint-plugin')),
@@ -312,30 +312,30 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     ...options.overrides?.typescript,
   };
 
-  return {
-    files,
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      parser: tsParser,
-      parserOptions: {
-        project: options.project,
-        tsconfigRootDir: process.cwd(),
-        extraFileExtensions,
-        ecmaFeatures: {
-          jsx: isEnabled(options.features, 'react'),
+  return [
+    {
+      files,
+      languageOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        parser: tsParser,
+        parserOptions: {
+          project: options.project,
+          tsconfigRootDir: process.cwd(),
+          extraFileExtensions,
+          ecmaFeatures: {
+            jsx: isEnabled(options.features, 'react'),
+          },
         },
+      },
+      plugins: { '@typescript-eslint': tsPlugin },
+      rules,
+    },
+    {
+      files: options.moduleBoundaryTypesFiles ?? ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 'error',
       },
     },
-    plugins: { '@typescript-eslint': tsPlugin },
-    rules,
-    overrides: [
-      {
-        files: options.moduleBoundaryTypesFiles ?? ['*.ts', '*.tsx'],
-        rules: {
-          '@typescript-eslint/explicit-module-boundary-types': 'error',
-        },
-      },
-    ],
-  };
+  ];
 }
