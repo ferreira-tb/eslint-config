@@ -329,5 +329,13 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject> 
     },
     plugins: { '@typescript-eslint': tsPlugin },
     rules,
+    overrides: [
+      {
+        files: options.moduleBoundaryTypesFiles ?? ['*.ts', '*.tsx'],
+        rules: {
+          '@typescript-eslint/explicit-module-boundary-types': 'error',
+        },
+      },
+    ],
   };
 }

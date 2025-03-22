@@ -46,6 +46,10 @@ export interface ConfigOptions {
    */
   knownSafePromises?: KnownSafePromise[];
   /**
+   * @see https://typescript-eslint.io/rules/explicit-module-boundary-types#configuring-in-a-mixed-jsts-codebase
+   */
+  moduleBoundaryTypesFiles?: string[];
+  /**
    * @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
    */
   reactVersion?: string;
@@ -80,10 +84,10 @@ export interface ConfigObject {
     parserOptions?: Record<string, unknown>;
     sourceType?: 'module';
   };
+  overrides?: Record<string, unknown>[];
   plugins?: Record<string, unknown>;
   processor?: unknown;
   rules: Rules;
-
   /** @see https://eslint.org/docs/latest/use/configure/configuration-files#configuring-shared-settings */
   settings?: Record<string, unknown>;
 }
