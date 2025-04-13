@@ -1,16 +1,6 @@
 export interface FeaturesObject {
   /** @default true */
   perfectionist?: boolean;
-  /** @default false */
-  react?: boolean;
-  /** @default false */
-  reactCompiler?: boolean;
-  /** @default false */
-  reactHooks?: boolean;
-  /** @default false */
-  svelte?: boolean;
-  /** @default false */
-  tailwind?: boolean;
   /** @default true */
   unicorn?: boolean;
   /** @default false */
@@ -27,11 +17,6 @@ export interface ConfigOptions {
   overrides?: {
     javascript?: Rules;
     perfectionist?: Rules;
-    react?: Rules;
-    reactCompiler?: Rules;
-    reactHooks?: Rules;
-    svelte?: Rules;
-    tailwind?: Rules;
     typescript?: Rules;
     unicorn?: Rules;
     vue?: Rules;

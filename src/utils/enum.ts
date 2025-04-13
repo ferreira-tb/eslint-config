@@ -2,7 +2,6 @@ export enum Glob {
   All = '**/*.?([cm])[jt]s?(x)',
   Html = '**/*.html',
   Javascript = '**/*.?([cm])js?(x)',
-  Svelte = '**/*.svelte',
   Typescript = '**/*.?([cm])ts?(x)',
   Vue = '**/*.vue',
 }

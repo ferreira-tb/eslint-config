@@ -11,18 +11,11 @@ export default defineConfig({
     minify: false,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      formats: ['es', 'cjs'],
+      formats: ['es'],
       fileName: 'index',
     },
     rollupOptions: {
-      external: [
-        /^node:/,
-        /^@typescript-eslint/,
-        /eslint-plugin/,
-        /eslint-parser/,
-        'globals',
-        'svelte',
-      ],
+      external: [/^node:/, /^@typescript-eslint/, /eslint-plugin/, /eslint-parser/, 'globals'],
     },
   },
 });
