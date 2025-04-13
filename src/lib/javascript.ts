@@ -12,20 +12,11 @@ export function javascript(options: ConfigOptions): ConfigObject {
     files.push(Glob.Vue);
   }
 
-  if (isEnabled(options.features, 'svelte')) {
-    files.push(Glob.Svelte);
-  }
-
   return {
     files,
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: isEnabled(options.features, 'react'),
-        },
-      },
       globals: {
         ...globals.browser,
         ...globals.es2021,

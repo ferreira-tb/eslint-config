@@ -13,7 +13,6 @@ export enum GlobIgnore {
   Log = '**/log?(s)',
   NodeModules = '**/node_modules',
   Out = '**/out',
-  SvelteKit = '**/.svelte-kit',
   Target = '**/target',
   Temp = '**/?(.)temp',
 }

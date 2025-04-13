@@ -17,17 +17,9 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject[]
     files.push(Glob.Vue);
   }
 
-  if (isEnabled(options.features, 'svelte')) {
-    files.push(Glob.Svelte);
-  }
-
   const extraFileExtensions: string[] = [];
   if (isEnabled(options.features, 'vue')) {
     extraFileExtensions.push('.vue');
-  }
-
-  if (isEnabled(options.features, 'svelte')) {
-    extraFileExtensions.push('.svelte');
   }
 
   const rules: Rules = {
@@ -323,16 +315,13 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject[]
           project: options.project,
           tsconfigRootDir: process.cwd(),
           extraFileExtensions,
-          ecmaFeatures: {
-            jsx: isEnabled(options.features, 'react'),
-          },
         },
       },
       plugins: { '@typescript-eslint': tsPlugin },
       rules,
     },
     {
-      files: options.moduleBoundaryTypesFiles ?? ['*.ts', '*.tsx'],
+      files: options.moduleBoundaryTypesFiles ?? ['*.ts'],
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'error',
       },
