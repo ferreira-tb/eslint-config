@@ -3,6 +3,8 @@ import type { ConfigOptions, FeaturesObject } from '../types';
 
 export * from './enum';
 
+const OPTIONAL_FEATURES: readonly (keyof FeaturesObject)[] = ['perfectionist', 'unicorn', 'vue'];
+
 export async function interopDefault(promise: Promise<any>): Promise<unknown> {
   const result = await promise;
   return result.default ?? result;
@@ -13,7 +15,7 @@ export function isEnabled(
   feature: keyof FeaturesObject
 ): boolean {
   if (Array.isArray(config)) {
-    return config.includes(feature);
+    return OPTIONAL_FEATURES.includes(feature) ? config.includes(feature) : true;
   } else if (typeof config === 'boolean') {
     return config;
   }
