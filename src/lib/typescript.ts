@@ -245,7 +245,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject[]
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-function-type': 'off',
     '@typescript-eslint/prefer-includes': 'error',
-    '@typescript-eslint/prefer-literal-enum-member': 'error',
+    '@typescript-eslint/prefer-literal-enum-member': ['error', { allowBitwiseExpressions: true }],
     '@typescript-eslint/prefer-nullish-coalescing': [
       'error',
       {
@@ -289,6 +289,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject[]
     'no-return-await': 'off',
     '@typescript-eslint/return-await': ['error', 'in-try-catch'],
 
+    '@typescript-eslint/sort-type-constituents': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': [
       'error',

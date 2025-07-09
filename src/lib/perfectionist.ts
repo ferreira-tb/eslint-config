@@ -22,13 +22,7 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
         },
       ],
 
-      'perfectionist/sort-enums': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-        },
-      ],
+      'perfectionist/sort-enums': 'off',
       'perfectionist/sort-exports': [
         'error',
         {
@@ -47,15 +41,7 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
           groups: [['side-effect-style', 'side-effect'], 'unknown'],
         },
       ],
-      'perfectionist/sort-interfaces': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          ignoreCase: true,
-          partitionByNewLine: true,
-        },
-      ],
+      'perfectionist/sort-interfaces': 'off',
       'perfectionist/sort-intersection-types': [
         'error',
         {
@@ -86,25 +72,9 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
           order: 'asc',
         },
       ],
-
-      '@typescript-eslint/adjacent-overload-signatures': 'off',
-      'perfectionist/sort-object-types': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          partitionByNewLine: true,
-        },
-      ],
-
-      'perfectionist/sort-switch-case': [
-        'error',
-        {
-          type: 'natural',
-          order: 'asc',
-          ignoreCase: true,
-        },
-      ],
+      'perfectionist/sort-object-types': 'off',
+      'perfectionist/sort-union-types': 'off',
+      'perfectionist/sort-switch-case': 'off',
 
       ...options.overrides?.perfectionist,
     },

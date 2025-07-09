@@ -107,7 +107,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'no-sparse-arrays': 'error',
       'no-template-curly-in-string': 'error',
       'no-undef-init': 'error',
-      'no-undefined': 'error',
+      'no-undefined': 'off',
       'no-unexpected-multiline': 'error',
       'no-unmodified-loop-condition': 'error',
       'no-unneeded-ternary': ['error', { defaultAssignment: false }],
