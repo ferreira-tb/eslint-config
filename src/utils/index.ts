@@ -12,11 +12,12 @@ export async function interopDefault(promise: Promise<any>): Promise<unknown> {
 
 export function isEnabled(
   config: ConfigOptions['features'],
-  feature: keyof FeaturesObject
+  feature: keyof FeaturesObject,
 ): boolean {
   if (Array.isArray(config)) {
     return OPTIONAL_FEATURES.includes(feature) ? config.includes(feature) : true;
-  } else if (typeof config === 'boolean') {
+  }
+  else if (typeof config === 'boolean') {
     return config;
   }
 
