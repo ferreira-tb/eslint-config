@@ -37,6 +37,8 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/no-useless-length-check': 'error',
       'unicorn/no-useless-promise-resolve-reject': 'error',
       'unicorn/prefer-at': 'error',
+      'unicorn/prefer-bigint-literals': 'error',
+      'unicorn/prefer-classlist-toggle': 'error',
       'unicorn/prefer-date-now': 'error',
       'unicorn/prefer-dom-node-append': 'error',
       'unicorn/prefer-dom-node-dataset': 'error',
