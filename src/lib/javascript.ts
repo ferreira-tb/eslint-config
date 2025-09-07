@@ -62,7 +62,7 @@ export function javascript(options: ConfigOptions): ConfigObject {
       'no-dupe-else-if': 'error',
       'no-duplicate-case': 'error',
       'no-duplicate-imports': ['error', { includeExports: false }],
-      'no-else-return': 'error',
+      'no-else-return': 'off',
       'no-empty': ['error', { allowEmptyCatch: true }],
       'no-empty-character-class': 'error',
       'no-empty-pattern': 'error',
