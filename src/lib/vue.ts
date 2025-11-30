@@ -93,6 +93,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
         allowCoexistStyle: true,
       },
     ],
+    'vue/no-duplicate-class-names': 'error',
     'vue/no-export-in-script-setup': 'error',
     'vue/no-expose-after-await': 'error',
     'vue/no-import-compiler-macros': 'error',

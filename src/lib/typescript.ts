@@ -213,6 +213,9 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject[]
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': ['error', { allowTaggedTemplates: true }],
 
+    'no-unused-private-class-members': 'off',
+    '@typescript-eslint/no-unused-private-class-members': 'error',
+
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
       'error',
