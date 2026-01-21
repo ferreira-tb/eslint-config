@@ -1,6 +1,6 @@
 import globals from 'globals';
-import { Glob } from '../utils/enum';
 import { isEnabled } from '../utils';
+import { Glob } from '../utils/enum';
 import type { ConfigObject, ConfigOptions } from '../types';
 
 /**

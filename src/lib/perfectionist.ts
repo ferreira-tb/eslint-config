@@ -18,7 +18,7 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
           type: 'natural',
           order: 'asc',
           ignoreCase: true,
-          groupKind: 'literals-first',
+          fallbackSort: { type: 'alphabetical', order: 'asc' },
         },
       ],
 
@@ -29,6 +29,7 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
           type: 'line-length',
           order: 'asc',
           ignoreCase: true,
+          fallbackSort: { type: 'alphabetical', order: 'asc' },
         },
       ],
       'perfectionist/sort-imports': [
@@ -37,7 +38,8 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
           type: 'line-length',
           order: 'asc',
           ignoreCase: true,
-          newlinesBetween: 'never',
+          newlinesBetween: 0,
+          fallbackSort: { type: 'alphabetical', order: 'asc' },
           groups: [['side-effect-style', 'side-effect'], 'unknown'],
         },
       ],
