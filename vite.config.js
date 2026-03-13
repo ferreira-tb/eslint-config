@@ -14,7 +14,7 @@ export default defineConfig({
       formats: ['es'],
       fileName: 'index',
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: [/^node:/, /^@typescript-eslint/, /eslint-plugin/, /eslint-parser/, 'globals'],
     },
   },
