@@ -36,6 +36,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/no-unnecessary-slice-end': 'error',
       'unicorn/no-useless-collection-argument': 'error',
       'unicorn/no-useless-fallback-in-spread': 'error',
+      'unicorn/no-useless-iterator-to-array': 'error',
       'unicorn/no-useless-length-check': 'error',
       'unicorn/no-useless-promise-resolve-reject': 'error',
       'unicorn/prefer-at': 'error',
