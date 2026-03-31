@@ -1,7 +1,6 @@
 {
   "include": ["src/**/*"],
   "compilerOptions": {
-    "target": "esnext",
     "lib": ["esnext", "dom"],
     "module": "esnext",
     "moduleResolution": "bundler",
