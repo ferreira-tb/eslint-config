@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [dts({ rollupTypes: false })],
   build: {
     outDir: 'dist',
-    target: 'esnext',
     emptyOutDir: true,
     minify: false,
     lib: {

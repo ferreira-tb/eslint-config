@@ -10,7 +10,6 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "declaration": true,
-    "declarationDir": "dist",
 
     "alwaysStrict": true,
     "noImplicitAny": true,
