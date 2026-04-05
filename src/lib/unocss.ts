@@ -18,7 +18,10 @@ export async function unocss(options: ConfigOptions): Promise<Partial<ConfigObje
   return {
     plugins: { '@unocss': plugin },
     rules: {
+      '@unocss/blocklist': 'off',
+      '@unocss/enforce-class-compile': 'off',
       '@unocss/order': 'error',
+      '@unocss/order-attributify': 'off',
       ...overrides,
     },
   };

@@ -14,7 +14,14 @@ export default defineConfig({
       fileName: 'index',
     },
     rolldownOptions: {
-      external: [/^node:/, /^@typescript-eslint/, /eslint-plugin/, /eslint-parser/, 'globals'],
+      external: [
+        /^node:/,
+        /^@typescript-eslint/,
+        /^@unocss/,
+        /eslint-plugin/,
+        /eslint-parser/,
+        'globals',
+      ],
     },
   },
 });
