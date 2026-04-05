@@ -4,7 +4,7 @@ import { interopDefault, isEnabled, mapRules } from '../utils';
 export async function unocss(options: ConfigOptions): Promise<Partial<ConfigObject>> {
   if (!isEnabled(options.features, 'unocss')) return {};
 
-  const plugin = await interopDefault(import('@unocss/eslint-config'));
+  const plugin = await interopDefault(import('@unocss/eslint-config/flat'));
 
   const overrides = mapRules(options.overrides?.unocss ?? {}, (rule, value) => {
     if (rule.startsWith('@unocss/')) {
