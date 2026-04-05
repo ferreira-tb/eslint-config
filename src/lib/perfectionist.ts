@@ -1,5 +1,5 @@
-import { interopDefault, isEnabled } from '../utils';
 import type { ConfigObject, ConfigOptions } from '../types';
+import { interopDefault, isEnabled, mapRules } from '../utils';
 
 /**
  * @see https://eslint-plugin-perfectionist.azat.io/rules/
@@ -8,6 +8,15 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
   if (!isEnabled(options.features, 'perfectionist')) return {};
 
   const plugin = await interopDefault(import('eslint-plugin-perfectionist'));
+
+  const overrides = mapRules(options.overrides?.perfectionist ?? {}, (rule, value) => {
+    if (rule.startsWith('perfectionist/')) {
+      return [rule, value];
+    }
+    else {
+      return [`perfectionist/${rule}`, value];
+    }
+  });
 
   return {
     plugins: { perfectionist: plugin },
@@ -78,7 +87,7 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
       'perfectionist/sort-union-types': 'off',
       'perfectionist/sort-switch-case': 'off',
 
-      ...options.overrides?.perfectionist,
+      ...overrides,
     },
   };
 }

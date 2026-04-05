@@ -1,6 +1,6 @@
 import process from 'node:process';
 import { Glob } from '../utils/enum';
-import { interopDefault, isEnabled } from '../utils';
+import { interopDefault, isEnabled, mapRules } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
 
 /**
@@ -21,6 +21,15 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject[]
   if (isEnabled(options.features, 'vue')) {
     extraFileExtensions.push('.vue');
   }
+
+  const overrides = mapRules(options.overrides?.typescript ?? {}, (rule, value) => {
+    if (rule.startsWith('@typescript-eslint/')) {
+      return [rule, value];
+    }
+    else {
+      return [`@typescript-eslint/${rule}`, value];
+    }
+  });
 
   const rules: Rules = {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -196,7 +205,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject[]
     '@typescript-eslint/no-unnecessary-condition': 'error',
     '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
-    '@typescript-eslint/no-unnecessary-type-arguments': 'error',
+    '@typescript-eslint/no-unnecessary-type-arguments': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/no-unnecessary-type-constraint': 'error',
     '@typescript-eslint/no-unnecessary-type-parameters': 'error',
@@ -305,7 +314,7 @@ export async function typescript(options: ConfigOptions): Promise<ConfigObject[]
     '@typescript-eslint/unified-signatures': ['error', { ignoreDifferentlyNamedParameters: true }],
     '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
 
-    ...options.overrides?.typescript,
+    ...overrides,
   };
 
   return [

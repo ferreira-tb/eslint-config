@@ -1,6 +1,6 @@
 import process from 'node:process';
 import { Glob } from '../utils/enum';
-import { interopDefault, isEnabled } from '../utils';
+import { interopDefault, isEnabled, mapRules } from '../utils';
 import type { ConfigObject, ConfigOptions, Rules } from '../types';
 
 /**
@@ -14,6 +14,15 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     interopDefault(import('vue-eslint-parser')),
     interopDefault(import('@typescript-eslint/parser')),
   ]);
+
+  const overrides = mapRules(options.overrides?.vue ?? {}, (rule, value) => {
+    if (rule.startsWith('vue/')) {
+      return [rule, value];
+    }
+    else {
+      return [`vue/${rule}`, value];
+    }
+  });
 
   const rules: Rules = {
     ...(vuePlugin as any).configs.base.rules,
@@ -218,7 +227,7 @@ export async function vue(options: ConfigOptions): Promise<Partial<ConfigObject>
     'vue/valid-v-slot': 'error',
     'vue/valid-v-text': 'error',
 
-    ...options.overrides?.vue,
+    ...overrides,
   };
 
   return [

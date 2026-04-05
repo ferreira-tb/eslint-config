@@ -1,5 +1,5 @@
 import { GlobIgnore } from './enum';
-import type { ConfigOptions, FeaturesObject } from '../types';
+import type { ConfigOptions, FeaturesObject, Rules, Severity } from '../types';
 
 export * from './enum';
 
@@ -39,4 +39,11 @@ export async function json<T>(path: string) {
 
 export function getIgnores(): string[] {
   return Object.values(GlobIgnore);
+}
+
+export function mapRules(
+  rules: Rules,
+  fn: (rule: string, value: any[] | Severity) => [string, any[] | Severity],
+): Rules {
+  return Object.fromEntries(Object.entries(rules).map(([rule, value]) => fn(rule, value)));
 }

@@ -18,12 +18,11 @@
     "importDeclaration.sortNamedImports": "maintain",
     "importDeclaration.sortTypeOnlyImports": "none"
   },
-  "excludes": [
-    "**/dist",
-    "**/LICENSE",
-    "**/*-lock.yaml",
-    "**/*.xml"
-  ],
+  "json": {
+    "array.preferSingleLine": true,
+    "object.preferSingleLine": false
+  },
+  "excludes": ["**/dist", "**/LICENSE", "**/*-lock.yaml", "**/*.xml"],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.95.15.wasm",
     "https://plugins.dprint.dev/json-0.21.3.wasm",

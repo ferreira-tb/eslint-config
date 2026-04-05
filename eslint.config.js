@@ -5,8 +5,8 @@ export default defineConfig({
   ignores: ['index.d.ts'],
   overrides: {
     typescript: {
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
+      'no-explicit-any': 'off',
+      'no-unsafe-member-access': 'off',
     },
   },
 });

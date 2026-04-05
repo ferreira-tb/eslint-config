@@ -1,5 +1,5 @@
-import { interopDefault, isEnabled } from '../utils';
 import type { ConfigObject, ConfigOptions } from '../types';
+import { interopDefault, isEnabled, mapRules } from '../utils';
 
 /**
  * @see https://github.com/sindresorhus/eslint-plugin-unicorn#rules
@@ -8,6 +8,15 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
   if (!isEnabled(options.features, 'unicorn')) return {};
 
   const plugin = await interopDefault(import('eslint-plugin-unicorn'));
+
+  const overrides = mapRules(options.overrides?.unicorn ?? {}, (rule, value) => {
+    if (rule.startsWith('unicorn/')) {
+      return [rule, value];
+    }
+    else {
+      return [`unicorn/${rule}`, value];
+    }
+  });
 
   return {
     plugins: { unicorn: plugin },
@@ -66,7 +75,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       'unicorn/prefer-type-error': 'error',
       'unicorn/relative-url-style': ['error', 'never'],
 
-      ...options.overrides?.unicorn,
+      ...overrides,
     },
   };
 }

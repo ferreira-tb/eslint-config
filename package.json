@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "9.1.4",
+  "version": "10.0.0",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
@@ -15,10 +15,7 @@
   "bugs": {
     "url": "https://github.com/ferreira-tb/eslint-config/issues"
   },
-  "keywords": [
-    "eslint",
-    "eslint-config"
-  ],
+  "keywords": ["eslint", "eslint-config"],
   "scripts": {
     "build": "vite build",
     "format": "dprint fmt",
@@ -43,9 +40,7 @@
     "vite": "^8.0.3",
     "vite-plugin-dts": "^4.5.4"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "main": "./dist/index.js",
   "types": "./dist/src/index.d.ts",
   "exports": {
