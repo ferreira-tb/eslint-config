@@ -17,7 +17,6 @@ export default defineConfig({
       external: [
         /^node:/,
         /^@typescript-eslint/,
-        /^@unocss/,
         /eslint-plugin/,
         /eslint-parser/,
         'globals',

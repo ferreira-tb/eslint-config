@@ -26,8 +26,6 @@ export function isEnabled(
       return config?.perfectionist ?? true;
     case 'unicorn':
       return config?.unicorn ?? true;
-    case 'unocss':
-      return config?.unocss ?? false;
     case 'vue':
       return config?.vue ?? false;
     default:

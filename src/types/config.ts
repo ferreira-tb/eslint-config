@@ -6,9 +6,6 @@ export interface FeaturesObject {
   unicorn?: boolean;
 
   /** @default false */
-  unocss?: boolean;
-
-  /** @default false */
   vue?: boolean;
 }
 
@@ -24,7 +21,6 @@ export interface ConfigOptions {
     perfectionist?: Rules;
     typescript?: Rules;
     unicorn?: Rules;
-    unocss?: Rules;
     vue?: Rules;
   };
 
