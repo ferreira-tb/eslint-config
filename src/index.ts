@@ -13,6 +13,7 @@ export async function defineConfig(options: ConfigOptions): Promise<Partial<Conf
     ...(await config.vue(options)),
     config.perfectionist(options),
     config.unicorn(options),
+    config.unocss(options),
 
     ignores,
   ]);
