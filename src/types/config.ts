@@ -15,7 +15,7 @@ export interface ConfigOptions {
   /** `tsconfig.json` files for TypeScript. */
   project: string[];
 
-  ignores?: Ignores['ignores'];
+  ignores?: Ignores["ignores"];
   overrides?: {
     javascript?: Rules;
     perfectionist?: Rules;
@@ -49,12 +49,12 @@ export interface Ignores {
   ignores: string[];
 }
 
-export type Severity = 'error' | 'warn' | 'off' | 0 | 1;
+export type Severity = "error" | "warn" | "off" | 0 | 1;
 
 export type Rules = Record<string, Severity | any[]>;
 
 interface TypeOrValueSpecifier {
-  from: 'file' | 'lib' | 'package';
+  from: "file" | "lib" | "package";
   name: string | string[];
   package?: string;
   path?: string;
@@ -66,13 +66,13 @@ export type KnownSafeCalls = TypeOrValueSpecifier;
 /** @see https://eslint.org/docs/latest/use/configure/configuration-files-new#configuration-objects */
 export interface ConfigObject {
   files: string[];
-  ignores?: Ignores['ignores'];
+  ignores?: Ignores["ignores"];
   languageOptions?: {
-    ecmaVersion?: 'latest';
-    globals?: Record<string, boolean | 'readonly' | 'writeable'>;
+    ecmaVersion?: "latest";
+    globals?: Record<string, boolean | "readonly" | "writeable">;
     parser?: unknown;
     parserOptions?: Record<string, unknown>;
-    sourceType?: 'module';
+    sourceType?: "module";
   };
   plugins?: Record<string, unknown>;
   processor?: unknown;

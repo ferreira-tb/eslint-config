@@ -1,16 +1,16 @@
-import type { ConfigObject, ConfigOptions } from '../types';
-import { interopDefault, isEnabled, mapRules } from '../utils';
+import type { ConfigObject, ConfigOptions } from "../types";
+import { interopDefault, isEnabled, mapRules } from "../utils";
 
 /**
  * @see https://eslint-plugin-perfectionist.azat.io/rules/
  */
 export async function perfectionist(options: ConfigOptions): Promise<Partial<ConfigObject>> {
-  if (!isEnabled(options.features, 'perfectionist')) return {};
+  if (!isEnabled(options.features, "perfectionist")) return {};
 
-  const plugin = await interopDefault(import('eslint-plugin-perfectionist'));
+  const plugin = await interopDefault(import("eslint-plugin-perfectionist"));
 
   const overrides = mapRules(options.overrides?.perfectionist ?? {}, (rule, value) => {
-    if (rule.startsWith('perfectionist/')) {
+    if (rule.startsWith("perfectionist/")) {
       return [rule, value];
     }
     else {
@@ -21,71 +21,71 @@ export async function perfectionist(options: ConfigOptions): Promise<Partial<Con
   return {
     plugins: { perfectionist: plugin },
     rules: {
-      'perfectionist/sort-array-includes': [
-        'error',
+      "perfectionist/sort-array-includes": [
+        "error",
         {
-          type: 'natural',
-          order: 'asc',
+          type: "natural",
+          order: "asc",
           ignoreCase: true,
-          fallbackSort: { type: 'alphabetical', order: 'asc' },
+          fallbackSort: { type: "alphabetical", order: "asc" },
         },
       ],
 
-      'perfectionist/sort-enums': 'off',
-      'perfectionist/sort-exports': [
-        'error',
+      "perfectionist/sort-enums": "off",
+      "perfectionist/sort-exports": [
+        "error",
         {
-          type: 'line-length',
-          order: 'asc',
+          type: "line-length",
+          order: "asc",
           ignoreCase: true,
-          fallbackSort: { type: 'alphabetical', order: 'asc' },
+          fallbackSort: { type: "alphabetical", order: "asc" },
         },
       ],
-      'perfectionist/sort-imports': [
-        'error',
+      "perfectionist/sort-imports": [
+        "error",
         {
-          type: 'line-length',
-          order: 'asc',
+          type: "line-length",
+          order: "asc",
           ignoreCase: true,
           newlinesBetween: 0,
-          fallbackSort: { type: 'alphabetical', order: 'asc' },
-          groups: [['side-effect-style', 'side-effect'], 'unknown'],
+          fallbackSort: { type: "alphabetical", order: "asc" },
+          groups: [["side-effect-style", "side-effect"], "unknown"],
         },
       ],
-      'perfectionist/sort-interfaces': 'off',
-      'perfectionist/sort-intersection-types': [
-        'error',
+      "perfectionist/sort-interfaces": "off",
+      "perfectionist/sort-intersection-types": [
+        "error",
         {
-          type: 'natural',
-          order: 'asc',
+          type: "natural",
+          order: "asc",
         },
       ],
-      'perfectionist/sort-maps': [
-        'error',
+      "perfectionist/sort-maps": [
+        "error",
         {
-          type: 'natural',
-          order: 'asc',
+          type: "natural",
+          order: "asc",
         },
       ],
-      'perfectionist/sort-named-exports': [
-        'error',
+      "perfectionist/sort-named-exports": [
+        "error",
         {
-          type: 'natural',
-          order: 'asc',
+          type: "natural",
+          order: "asc",
         },
       ],
 
-      'sort-imports': 'off',
-      'perfectionist/sort-named-imports': [
-        'error',
+      "sort-imports": "off",
+      "perfectionist/sort-named-imports": [
+        "error",
         {
-          type: 'natural',
-          order: 'asc',
+          type: "natural",
+          order: "asc",
         },
       ],
-      'perfectionist/sort-object-types': 'off',
-      'perfectionist/sort-union-types': 'off',
-      'perfectionist/sort-switch-case': 'off',
+      "perfectionist/sort-object-types": "off",
+      "perfectionist/sort-union-types": "off",
+      "perfectionist/sort-switch-case": "off",
 
       ...overrides,
     },

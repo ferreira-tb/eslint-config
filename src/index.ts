@@ -1,6 +1,6 @@
-import * as config from './lib';
-import { getIgnores } from './utils';
-import type { ConfigObject, ConfigOptions } from './types';
+import * as config from "./lib";
+import { getIgnores } from "./utils";
+import type { ConfigObject, ConfigOptions } from "./types";
 
 export async function defineConfig(options: ConfigOptions): Promise<Partial<ConfigObject>[]> {
   const ignores = {
