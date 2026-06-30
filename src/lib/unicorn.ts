@@ -103,7 +103,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       "unicorn/no-unsafe-dom-html": "error",
       "unicorn/no-unsafe-property-key": "error",
       "unicorn/no-unsafe-string-replacement": "error",
-      "unicorn/no-unused-array-method-return": "error",
+      "unicorn/no-unused-array-method-return": "off",
       "unicorn/no-useless-boolean-cast": "error",
       "unicorn/no-useless-collection-argument": "error",
       "unicorn/no-useless-compound-assignment": "error",
