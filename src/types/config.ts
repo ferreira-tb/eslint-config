@@ -25,23 +25,23 @@ export interface ConfigOptions {
   };
 
   /**
-   * @see https://typescript-eslint.io/rules/no-floating-promises/#allowforknownsafecalls
-   */
+  @see https://typescript-eslint.io/rules/no-floating-promises/#allowforknownsafecalls
+  */
   knownSafeCalls?: KnownSafeCalls[];
 
   /**
-   * @see https://typescript-eslint.io/rules/no-floating-promises#allowforknownsafepromises
-   */
+  @see https://typescript-eslint.io/rules/no-floating-promises#allowforknownsafepromises
+  */
   knownSafePromises?: KnownSafePromise[];
 
   /**
-   * @see https://typescript-eslint.io/rules/explicit-module-boundary-types#configuring-in-a-mixed-jsts-codebase
-   */
+  @see https://typescript-eslint.io/rules/explicit-module-boundary-types#configuring-in-a-mixed-jsts-codebase
+  */
   moduleBoundaryTypesFiles?: string[];
 
   /**
-   * @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
-   */
+  @see https://github.com/jsx-eslint/eslint-plugin-react#configuration
+  */
   reactVersion?: string;
 }
 

@@ -2,8 +2,8 @@ import type { ConfigObject, ConfigOptions } from "../types";
 import { interopDefault, isEnabled, mapRules } from "../utils";
 
 /**
- * @see https://eslint-plugin-perfectionist.azat.io/rules/
- */
+@see https://eslint-plugin-perfectionist.azat.io/rules/
+*/
 export async function perfectionist(options: ConfigOptions): Promise<Partial<ConfigObject>> {
   if (!isEnabled(options.features, "perfectionist")) return {};
 

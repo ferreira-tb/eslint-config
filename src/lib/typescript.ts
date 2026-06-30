@@ -4,8 +4,8 @@ import { interopDefault, isEnabled, mapRules } from "../utils";
 import type { ConfigObject, ConfigOptions, Rules } from "../types";
 
 /**
- * @see https://typescript-eslint.io/rules/
- */
+@see https://typescript-eslint.io/rules/
+*/
 export async function typescript(options: ConfigOptions): Promise<ConfigObject[]> {
   const [tsParser, tsPlugin] = await Promise.all([
     interopDefault(import("@typescript-eslint/parser")),
