@@ -132,7 +132,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       "unicorn/prefer-bigint-literals": "error",
       "unicorn/prefer-boolean-return": "error",
       "unicorn/prefer-classlist-toggle": "error",
-      "unicorn/prefer-continue": "error",
+      "unicorn/prefer-continue": "off",
       "unicorn/prefer-date-now": "error",
       "unicorn/prefer-direct-iteration": "error",
       "unicorn/prefer-dispose": "error",
