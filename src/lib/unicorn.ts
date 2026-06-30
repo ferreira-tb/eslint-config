@@ -46,7 +46,7 @@ export async function unicorn(options: ConfigOptions): Promise<Partial<ConfigObj
       "unicorn/no-await-in-promise-methods": "error",
       "unicorn/no-blob-to-file": "error",
       "unicorn/no-boolean-sort-comparator": "error",
-      "unicorn/no-break-in-nested-loop": "error",
+      "unicorn/no-break-in-nested-loop": "off",
       "unicorn/no-canvas-to-image": "error",
       "unicorn/no-chained-comparison": "error",
       "unicorn/no-collection-bracket-access": "error",
