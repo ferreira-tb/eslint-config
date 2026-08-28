@@ -1,6 +1,6 @@
 {
   "name": "@tb-dev/eslint-config",
-  "version": "10.3.3",
+  "version": "10.3.4",
   "description": "ESLint config",
   "license": "MIT",
   "type": "module",
